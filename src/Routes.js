@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Login from "./Pages/Login/Login";
+import Login from './Pages/Login/Login';
 import SignUp from './Pages/SignUp/SignUp';
-import ProductDetail from "./Pages/ProductDetail/ProductDetail";
-import Main from "./Pages/Main/Main";
+import ProductDetail from './Pages/ProductDetail/ProductDetail';
+import Main from './Pages/Main/Main';
 
 export class Routes extends Component {
   render() {
@@ -17,7 +17,8 @@ export class Routes extends Component {
           <Route exact path="/main" component={Main} />
         </Switch>
       </Router>
-    )
+    );
   }
 }
-export default Routes
+
+export default Routes;
