@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Login from "./Pages/sp/Login/login";
 import SignUp from './Pages/sp/SignUp/signUp';
-import ProductDetail from "./Pages/se/productDetail/productDetail";
+import ProductDetail from "./Pages/se/ProductDetail/productDetail";
 import Main from "./Pages/mj/Main/Main";
 
 export class Routes extends Component {
@@ -13,7 +13,7 @@ export class Routes extends Component {
                 <Switch>
                     <route>
                         <Route exact path="/product-detail" component={ProductDetail} />
-                        <Route exact path="/login-in" component={Login} />
+                        <Route exact path="/login" component={Login} />
                         <Route exact path="/sign-up" component={SignUp} />
                         <Route exact path="/main" component={Main} />
                     </route>
