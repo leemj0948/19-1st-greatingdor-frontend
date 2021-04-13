@@ -1,7 +1,54 @@
-$PrimaryGreen:rgb(127,124,20);
-$PrimaryLightGreen:rgb(226,226,199);
-$PrimaryWhite:rgb(255,255,255);
-$PrimaryYellow:rgb(222,172,49);
-$PrimaryBlack:rgb(19,19,19);
-$PrimaryGrey:rgb(242,242,242);
+$PrimaryGreen: rgb(127, 124, 20);
+$PrimaryLightGreen: rgb(226, 226, 199);
+$PrimaryWhite: rgb(255, 255, 255);
+$PrimaryYellow: rgb(222, 172, 49);
+$PrimaryBlack: rgb(19, 19, 19);
+$PrimaryGrey: rgb(242, 242, 242);
 
+%flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+%flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+body {
+  text-align: center;
+  margin: 0 auto;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $PrimaryBlack;
+}
+
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background-color: white;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+ul {
+  list-style: none;
+}

@@ -1,0 +1,103 @@
+@import '../../Styles/common.scss';
+
+.top_banner {
+  background-color: $PrimaryGreen;
+  padding: 10px 0;
+
+  a {
+    color: $PrimaryWhite;
+    font-size: 14px;
+  }
+}
+
+#navbar {
+  .navbar_inner_container {
+    height: 100vh;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .navbar_user_area {
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px;
+      font-size: 15px;
+
+      span {
+        margin-right: 10px;
+        a {
+          &:hover {
+            color: $PrimaryGreen;
+          }
+        }
+      }
+    }
+
+    .navbar_logo {
+      padding: 10px 20px;
+      font-size: 30px;
+    }
+
+    .navbar_categories {
+      padding: 20px;
+      @extend %flex-space-between;
+      align-items: center;
+
+      position: sticky;
+      top: 0;
+
+      .navbar_category_list {
+        @extend %flex-space-between;
+
+        .navbar_category_burger {
+          margin-right: 6px;
+          font-size: 15px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &:hover {
+            color: $PrimaryGreen;
+          }
+
+          .fa-hamburger {
+            margin-right: 4px;
+          }
+        }
+      }
+
+      li a {
+        &:hover {
+          color: $PrimaryGreen;
+        }
+      }
+
+      .navbar_category_list:hover {
+        color: $PrimaryGreen;
+      }
+
+      .navbar_search_form {
+        position: relative;
+
+        .navbar_search_input {
+          padding: 10px;
+          margin-right: 6px;
+          border-radius: 20px;
+          border: none;
+          background: $PrimaryGrey;
+          &:focus {
+            outline: none;
+          }
+        }
+        .searchBtn {
+          position: absolute;
+          right: 30px;
+          bottom: 10px;
+          font-size: 15px;
+        }
+        .cartBtn {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
