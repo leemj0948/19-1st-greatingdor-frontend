@@ -1,0 +1,76 @@
+@import '../../Styles/common.scss';
+
+#footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: $PrimaryGrey;
+
+  .footer_first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .footer_first_list {
+      span.personal_info {
+        font-weight: bold;
+      }
+      a {
+        margin-right: 8px;
+        text-decoration: none;
+        color: black;
+      }
+    }
+    .family_site {
+      padding: 5px;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .footer_second {
+    display: flex;
+    justify-content: space-between;
+    .customer_center {
+      margin-right: 10px;
+      .customer_center_title {
+        font-weight: bold;
+      }
+
+      div.phone {
+        color: $PrimaryGreen;
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      div {
+        margin-bottom: 10px;
+        font-size: 13px;
+      }
+      .social_media {
+        padding-top: 5px;
+        font-size: 45px;
+        display: flex;
+        justify-content: flex-start;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+        svg {
+          margin-right: 15px;
+        }
+      }
+    }
+    .company_info {
+      .company_name {
+        font-weight: bold;
+      }
+      div {
+        margin-bottom: 10px;
+        font-size: 13px;
+      }
+    }
+  }
+}
