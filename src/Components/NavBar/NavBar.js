@@ -1,3 +1,4 @@
+import { doc } from 'prettier';
 import React, { Component } from 'react';
 import './NavBar.scss';
 
@@ -6,11 +7,9 @@ class NavBar extends Component {
     super();
 
     this.state = {
-      categoryBtn: false,
+      showMenu: false,
     };
   }
-
-  handleDropdown = e => {};
 
   render() {
     const CATEGORY_LIST = [
@@ -49,17 +48,22 @@ class NavBar extends Component {
             <img src="/img/img_header_logo_Greating.png"></img>
           </div>
           <ul className="navbar_categories">
-            <div
-              className="navbar_category_list categoryBtn"
-              onClick={this.handleDropdown}
-            >
+            <div className="navbar_category_list">
               <button className="navbar_category_burger">
                 <i className="fas fa-hamburger"></i>
                 <li>
                   <a href="#">카테고리</a>
                 </li>
               </button>
+              {this.state.showMenu ? (
+                <div className="menu">
+                  <button>샐러드</button>
+                  <button>베이커리</button>
+                  <button>건강음료</button>
+                </div>
+              ) : null}
             </div>
+
             {CATEGORY_LIST.map((ele, idx) => {
               return (
                 <li key={idx}>
@@ -69,7 +73,7 @@ class NavBar extends Component {
             })}
             <form className="navbar_search_form">
               <input className="navbar_search_input"></input>
-              <button className="searchBtn" onClick={this.handleDropdown}>
+              <button className="searchBtn">
                 <i className="fas fa-search"></i>
               </button>
               <button className="cartBtn">

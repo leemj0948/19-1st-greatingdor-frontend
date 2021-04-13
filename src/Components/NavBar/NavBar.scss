@@ -46,7 +46,7 @@
       top: 0;
 
       .navbar_category_list {
-        @extend %flex-space-between;
+        // @extend %flex-space-between;
 
         .navbar_category_burger {
           margin-right: 6px;
@@ -62,6 +62,10 @@
           .fa-hamburger {
             margin-right: 4px;
           }
+        }
+        .menu {
+          display: flex;
+          flex-direction: column;
         }
       }
 
