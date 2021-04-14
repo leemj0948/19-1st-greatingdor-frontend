@@ -1,0 +1,50 @@
+@import '../../../Styles/common.scss';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+.marketList {
+  width: 1440px;
+  height: 350px;
+
+  h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    font-size: x-large;
+    font-weight: 700;
+  }
+  .category {
+    display: flex;
+    justify-content: center;
+    width: 1440px;
+    height: 300px;
+    .button {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      width: 650px;
+      height: 210px;
+    }
+  }
+  .buttonList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-color: $PrimaryGrey;
+    font-size: 12px;
+    &:hover {
+      background-color: rgb(226, 226, 199);
+    }
+    .icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      font-size: 20px;
+    }
+  }
+}
