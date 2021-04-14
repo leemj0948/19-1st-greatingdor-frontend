@@ -1,1 +1,130 @@
 @import '../../Styles/common.scss';
+
+.product_detail {
+  max-width: 1000px;
+  margin: 0 auto;
+  .location {
+    padding: 20px 0;
+  }
+  .product {
+    display: flex;
+    .image_slider {
+      position: relative;
+      margin-right: 20px;
+
+      button {
+        border: none;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+        }
+      }
+      .left-arrow {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: 30px;
+        top: 250px;
+        font-size: 40px;
+      }
+
+      .right-arrow {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        right: 30px;
+        top: 250px;
+        font-size: 40px;
+      }
+    }
+    .product_info {
+      width: 100%;
+      .product_info_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+
+        .icons {
+          button {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background-color: $PrimaryWhite;
+          }
+        }
+      }
+      .product_info_name {
+        font-weight: bold;
+        font-size: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $PrimaryLightGreen;
+      }
+      .product_info_icons,
+      .product_amount,
+      .product_calorie,
+      .product_origin {
+        padding: 10px 0;
+        border-bottom: 1px solid $PrimaryLightGreen;
+        span {
+          margin-right: 10px;
+        }
+      }
+
+      .product_info_icons {
+        span {
+          margin-right: 10px;
+        }
+      }
+      .product_price {
+        font-weight: bold;
+        padding: 10px 0;
+        font-size: 30px;
+      }
+      .product_delivery {
+        padding: 20px 0;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        color: $PrimaryGreen;
+        font-weight: bold;
+
+        .delivery {
+          border: 1px solid $PrimaryGreen;
+          border-radius: 20px;
+          padding: 5px;
+          margin-right: 5px;
+        }
+      }
+      .button_list {
+        display: flex;
+        justify-content: space-between;
+        button {
+          padding: 10px 0;
+          width: 100%;
+          font-size: 15px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        .store_cart {
+          background-color: $PrimaryWhite;
+          border: 1px solid $PrimaryGreen;
+          color: $PrimaryGreen;
+        }
+        .buy {
+          background-color: $PrimaryGreen;
+          border: 1px solid $PrimaryGreen;
+          color: $PrimaryWhite;
+        }
+        .present {
+          background-color: $PrimaryYellow;
+          border: 1px solid $PrimaryYellow;
+          color: $PrimaryWhite;
+        }
+      }
+    }
+  }
+}
