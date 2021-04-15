@@ -1,0 +1,20 @@
+[
+  {
+    "status": "HOME > 건강마켓 > 베이커리 > 빵",
+    "img_url": "https://image.greating.co.kr/IL/item/202103/05/M_66C5D63DDDD74871B53A027180BE1CD5.jpg",
+    "top_desc": "이즈니 버터로 만든 생지",
+    "name": "[vezzly] 이즈니 미니크로와상_10개입",
+    "icons": ["빵", "선물", "디저트"],
+    "amount": {
+      "용량": "300g"
+    },
+    "calorie": {
+      "칼로리": "135kcal"
+    },
+    "origin": "밀가루(밀:미국,캐나다산)",
+    "price": "5,400원",
+    "delivery": {
+      "택배배송": "5pm 이전 결제시 4월 17일(토) 도착 가능"
+    }
+  }
+]
