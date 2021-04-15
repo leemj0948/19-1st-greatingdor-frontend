@@ -54,7 +54,11 @@ class ProductDetail extends Component {
             <>
               <Location item={item} />
               <div className="product">
-                <ImageSlider item={item} />
+                <ImageSlider
+                  item={item}
+                  goToLeft={this.goToLeft}
+                  goToRight={this.goToRight}
+                />
                 <ProductInfo item={item} />
               </div>
             </>
