@@ -1,5 +1,6 @@
 import { doc } from 'prettier';
 import React, { Component } from 'react';
+import DropDown from './DropDown/DropDown';
 import './NavBar.scss';
 
 class NavBar extends Component {
@@ -7,9 +8,20 @@ class NavBar extends Component {
     super();
 
     this.state = {
-      showMenu: false,
+      // barIcon: false,
+      dropdown: false,
     };
   }
+
+  // handleIconClick = () => {
+  //   console.log(this.state.barIcon);
+
+  //   this.setState({ barIcon: !this.state.barIcon });
+  // };
+
+  handleDropDown = () => {
+    this.setState({ dropdown: !this.state.dropdown });
+  };
 
   render() {
     const CATEGORY_LIST = [
@@ -19,6 +31,8 @@ class NavBar extends Component {
       '이벤트',
       '스토리',
     ];
+    const { dropdown } = this.state;
+
     return (
       <nav id="navbar">
         <div className="navbar_inner_container">
@@ -35,10 +49,7 @@ class NavBar extends Component {
             <span>
               <a href="#">
                 고객센터
-                <button
-                  className="customer_center_Btn"
-                  onClick={this.handleDropdown}
-                >
+                <button className="customer_center_Btn">
                   <i className="fas fa-caret-down"></i>
                 </button>
               </a>
@@ -49,19 +60,16 @@ class NavBar extends Component {
           </div>
           <ul className="navbar_categories">
             <div className="navbar_category_list">
-              <button className="navbar_category_burger">
-                <i className="fas fa-hamburger"></i>
+              <button
+                className="navbar_category_burger"
+                onClick={this.handleDropDown}
+              >
+                <i className="fas fa-bars"></i>
                 <li>
-                  <a href="#">카테고리</a>
+                  <a>카테고리</a>
                 </li>
               </button>
-              {this.state.showMenu ? (
-                <div className="menu">
-                  <button>샐러드</button>
-                  <button>베이커리</button>
-                  <button>건강음료</button>
-                </div>
-              ) : null}
+              {dropdown && <DropDown />}
             </div>
 
             {CATEGORY_LIST.map((ele, idx) => {

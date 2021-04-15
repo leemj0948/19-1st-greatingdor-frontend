@@ -1,0 +1,32 @@
+@import '../../../Styles/common.scss';
+
+.dropdown-menu {
+  width: 150px;
+  position: absolute;
+  top: 60px;
+  list-style: none;
+  text-align: inherit;
+  border: 1px solid black;
+  background-color: #fff;
+
+  li {
+    padding: 10px 0;
+    cursor: pointer;
+    z-index: 1;
+
+    &:hover {
+      background-color: $PrimaryLightGreen;
+    }
+  }
+}
+
+.dropdown-menu.clicked {
+  display: none;
+}
+
+// .dropdown-link {
+//   display: block;
+//   width: 100%;
+//   height: 100%;
+//   background-color: red;
+// }
