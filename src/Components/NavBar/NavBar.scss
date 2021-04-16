@@ -28,10 +28,8 @@ body {
 
       span {
         margin-right: 10px;
-        a {
-          &:hover {
-            color: $PrimaryGreen;
-          }
+        a:hover {
+          color: $PrimaryGreen;
         }
       }
     }

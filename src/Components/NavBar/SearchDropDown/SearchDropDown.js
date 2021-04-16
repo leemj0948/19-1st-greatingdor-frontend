@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import Button from './Button/Button';
 import './SearchDropDown.scss';
 
 class SearchDropDown extends Component {
   state = {
-    isClicked: false,
     searchItemList: [],
   };
   componentDidMount = () => {
@@ -18,13 +18,9 @@ class SearchDropDown extends Component {
     this.props.handleDropDown();
   };
 
-  handleItemClick = category => {
-    this.setState({ isClicked: !this.state.isClicked });
-  };
-
   render() {
-    const { searchItemList, isClicked } = this.state;
-    console.log(isClicked);
+    const { searchItemList } = this.state;
+
     return (
       <div className="search_dropdown">
         <div className="search_input">
@@ -48,15 +44,7 @@ class SearchDropDown extends Component {
                     <div className="title">{item.title}</div>
                     <div className="items_container">
                       {item.category.map((category, idx) => {
-                        return (
-                          <button
-                            onClick={() => this.handleItemClick(category)}
-                            className={isClicked ? 'items selected' : 'items'}
-                            key={idx}
-                          >
-                            {category}
-                          </button>
-                        );
+                        return <Button category={category} key={idx} />;
                       })}
                     </div>
                   </li>

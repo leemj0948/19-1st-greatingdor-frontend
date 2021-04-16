@@ -1,5 +1,6 @@
 import { doc } from 'prettier';
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import CategoryDropDown from './CategoryDropDown/CategoryDropDown';
 import SearchDropDown from './SearchDropDown/SearchDropDown';
 import './NavBar.scss';
@@ -45,22 +46,22 @@ class NavBar extends Component {
         <div className="navbar_inner_container">
           <div className="navbar_user_area">
             <span>
-              <a href="#"> 로그인 </a>
+              <Link to="#"> 로그인 </Link>
             </span>
             <span>
-              <a href="#">회원가입</a>
+              <Link to="#">회원가입</Link>
             </span>
             <span>
-              <a href="#">쿠폰등록 </a>
+              <Link to="#">쿠폰등록 </Link>
             </span>
             {/* dropdown 2 - 고객센터부문 */}
             <span onClick={this.handleCustomerDropDown}>
-              <a href="#">
+              <Link to="#">
                 고객센터
                 <button className="customer_center_Btn">
                   <i className="fas fa-caret-down"></i>
                 </button>
-              </a>
+              </Link>
             </span>
             {CustomerDropdown && <CustomerDropdown />}
           </div>
@@ -89,12 +90,12 @@ class NavBar extends Component {
             {CATEGORY_LIST.map((ele, idx) => {
               return (
                 <li key={idx}>
-                  <a href="#">{ele}</a>
+                  <Link to="#">{ele}</Link>
                 </li>
               );
             })}
             <div className="navbar_search_form">
-              <input className="navbar_search_input"></input>
+              <input className="navbar_search_input" />
               {/* dropdown 3 - search부문*/}
               <button
                 className="search_btn"
