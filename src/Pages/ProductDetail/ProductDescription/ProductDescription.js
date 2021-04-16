@@ -15,7 +15,6 @@ class ProductDescription extends Component {
   };
 
   render() {
-    console.log(this.state.currentId);
     return (
       <div className="tab_container">
         <ul className="tabs">

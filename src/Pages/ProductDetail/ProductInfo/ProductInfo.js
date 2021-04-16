@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CartModal from './CartModal/CartModal';
+import './ProductInfo.scss';
 
 class ProductInfo extends Component {
   state = {
@@ -50,7 +51,7 @@ class ProductInfo extends Component {
           <span>{item.delivery[Object.keys(item.delivery)[0]]}</span>
         </div>
         <div className="button_list">
-          <button className="store_cart" onClick={this.showCartModal}>
+          <button className="store_cart modal_on" onClick={this.showCartModal}>
             장바구니 담기
           </button>
           <button className="buy" onClick={this.showCartModal}>

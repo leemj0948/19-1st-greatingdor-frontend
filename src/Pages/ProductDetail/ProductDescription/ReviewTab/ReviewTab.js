@@ -17,8 +17,16 @@ class ReviewTab extends Component {
   };
 
   handleDropdown = id => {
-    this.setState({ reviewId: id });
+    // 댓글 toggling 구현
+    if (this.state.reviewId === id) {
+      // 0이 닫힌 상태이므로 열려있으면 닫고
+      this.setState({ reviewId: 0 });
+    } else {
+      // 닫혀있으면 열기
+      this.setState({ reviewId: id });
+    }
   };
+
   render() {
     const { reviewData, reviewId } = this.state;
     console.log(this.state.reviewId);

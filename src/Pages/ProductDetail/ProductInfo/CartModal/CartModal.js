@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import './CartModal.scss';
 
 class CartModal extends Component {
-  // onClickHandler = () => {
-  //   this.props.showCartModal();
-  // };
+  onClickHandler = () => {
+    //바깥 누르면 모달창 닫히게?
+  };
   render() {
     return (
-      <div className="cart_modal">
+      <div className="cart_modal" onClick={this.onClickHandler}>
         <div className="mordal_container">
           <div className="wrapper">
             <div className="contents_container">
