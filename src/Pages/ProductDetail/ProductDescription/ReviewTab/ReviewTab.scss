@@ -1,0 +1,43 @@
+@import '../../../../Styles/common.scss';
+
+.review_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid $PrimaryLightGreen;
+
+  .total {
+    font-weight: bold;
+  }
+  .warning {
+    color: $PrimaryBlack;
+  }
+}
+
+.review_container {
+  li {
+    padding-top: 10px;
+    border-bottom: 1px solid $PrimaryLightGreen;
+    .review_contents {
+      .title_container {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 10px;
+        .title {
+          font-weight: bold;
+        }
+        .icon {
+          font-size: 20px;
+        }
+      }
+      .user_id {
+        color: darkgray;
+
+        margin-right: 10px;
+      }
+      .date {
+        color: darkgray;
+      }
+    }
+  }
+}
