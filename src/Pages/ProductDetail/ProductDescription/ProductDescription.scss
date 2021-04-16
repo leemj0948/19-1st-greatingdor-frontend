@@ -15,7 +15,13 @@
       background-color: $PrimaryGrey;
       border-bottom: 3px solid $PrimaryGreen;
       border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
       cursor: pointer;
+
+      &.clicked {
+        background-color: $PrimaryGreen;
+        color: $PrimaryWhite;
+      }
     }
   }
   .contents {

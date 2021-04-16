@@ -15,13 +15,18 @@ class ProductDescription extends Component {
   };
 
   render() {
+    console.log(this.state.currentId);
     return (
       <div className="tab_container">
         <ul className="tabs">
           {CATEGORY_ARR.map((category, idx) => {
             // 메뉴탭
             return (
-              <li key={idx} onClick={() => this.clickHandler(idx + 1)}>
+              <li
+                key={idx}
+                onClick={() => this.clickHandler(idx + 1)}
+                className={this.state.currentId === idx + 1 ? 'clicked' : ''}
+              >
                 {category}
               </li>
             );
