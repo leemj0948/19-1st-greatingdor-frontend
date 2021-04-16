@@ -1,26 +1,27 @@
 import { doc } from 'prettier';
 import React, { Component } from 'react';
-import DropDown from './DropDown/DropDown';
+import CategoryDropDown from './CategoryDropDown/CategoryDropDown';
+import SearchDropDown from './SearchDropDown/SearchDropDown';
 import './NavBar.scss';
 
 class NavBar extends Component {
-  constructor() {
-    super();
+  state = {
+    isClicked: false,
+    CategoryDropdown: false,
+    CustomerDropdown: false,
+    SearchDropdown: false,
+  };
 
-    this.state = {
-      // barIcon: false,
-      dropdown: false,
-    };
-  }
+  handleCategoryDropDown = () => {
+    this.setState({ CategoryDropdown: !this.state.CategoryDropdown });
+  };
 
-  // handleIconClick = () => {
-  //   console.log(this.state.barIcon);
+  handleCustomerDropDown = () => {
+    this.setState({ CustomerDropdown: !this.state.CustomerDropdown });
+  };
 
-  //   this.setState({ barIcon: !this.state.barIcon });
-  // };
-
-  handleDropDown = () => {
-    this.setState({ dropdown: !this.state.dropdown });
+  handleSearchDropdown = () => {
+    this.setState({ SearchDropdown: !this.state.SearchDropdown });
   };
 
   render() {
@@ -31,7 +32,13 @@ class NavBar extends Component {
       '이벤트',
       '스토리',
     ];
-    const { dropdown } = this.state;
+
+    const {
+      isClicked,
+      CategoryDropdown,
+      CustomerDropdown,
+      SearchDropdown,
+    } = this.state;
 
     return (
       <nav id="navbar">
@@ -46,7 +53,8 @@ class NavBar extends Component {
             <span>
               <a href="#">쿠폰등록 </a>
             </span>
-            <span>
+            {/* dropdown 2 - 고객센터부문 */}
+            <span onClick={this.handleCustomerDropDown}>
               <a href="#">
                 고객센터
                 <button className="customer_center_Btn">
@@ -54,24 +62,30 @@ class NavBar extends Component {
                 </button>
               </a>
             </span>
+            {CustomerDropdown && <CustomerDropdown />}
           </div>
           <div className="navbar_logo">
             <img src="/img/img_header_logo_Greating.png"></img>
           </div>
           <ul className="navbar_categories">
+            {/* dropdown 1 - category부문*/}
             <div className="navbar_category_list">
               <button
                 className="navbar_category_burger"
-                onClick={this.handleDropDown}
+                onClick={this.handleCategoryDropDown}
               >
                 <i className="fas fa-bars"></i>
                 <li>
                   <a>카테고리</a>
                 </li>
               </button>
-              {dropdown && <DropDown />}
+              {CategoryDropdown && (
+                <CategoryDropDown
+                  isClicked={isClicked}
+                  handleDropDown={this.handleCategoryDropDown}
+                />
+              )}
             </div>
-
             {CATEGORY_LIST.map((ele, idx) => {
               return (
                 <li key={idx}>
@@ -79,16 +93,25 @@ class NavBar extends Component {
                 </li>
               );
             })}
-            <form className="navbar_search_form">
+            <div className="navbar_search_form">
               <input className="navbar_search_input"></input>
-              <button className="searchBtn">
+              {/* dropdown 3 - search부문*/}
+              <button
+                className="search_btn"
+                onClick={this.handleSearchDropdown}
+              >
                 <i className="fas fa-search"></i>
               </button>
-              <button className="cartBtn">
+
+              <button className="cart_btn">
                 <i className="fas fa-cart-arrow-down"></i>
               </button>
-            </form>
+            </div>
           </ul>
+          {/* {SearchDropdown && <SearchDropDown />} */}
+          {SearchDropdown && (
+            <SearchDropDown handleDropDown={this.handleSearchDropdown} />
+          )}
         </div>
       </nav>
     );
