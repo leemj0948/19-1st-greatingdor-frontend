@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 class ImageSlider extends Component {
   render() {
-    const { item, goToLeft, goToRight } = this.props;
+    const { imgNum, item, goToLeft, goToRight } = this.props;
     return (
       <div className="image_slider">
-        <img src={item.img_url} width="550px" />
+        <img src={`/images/${imgNum}.jpg`} width="550px" />
         <button className="left-arrow" onClick={goToLeft}>
           <i className="fas fa-arrow-left"></i>
         </button>

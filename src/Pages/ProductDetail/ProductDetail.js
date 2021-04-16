@@ -19,7 +19,7 @@ class ProductDetail extends Component {
   }
 
   componentDidMount = () => {
-    //setInterval(this.goToRight, 3000);
+    setInterval(this.goToRight, 3000);
 
     fetch('/data/productData.json', {
       method: 'GET',
@@ -52,10 +52,11 @@ class ProductDetail extends Component {
         {productInfo.map((item, idx) => {
           return (
             <>
-              <Location item={item} />
+              <Location key={idx} item={item} />
               <div className="product">
                 <ImageSlider
                   item={item}
+                  imgNum={imgNum}
                   goToLeft={this.goToLeft}
                   goToRight={this.goToRight}
                 />

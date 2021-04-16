@@ -8,6 +8,8 @@
   }
   .product {
     display: flex;
+    justify-content: center;
+
     .image_slider {
       position: relative;
       margin-right: 20px;

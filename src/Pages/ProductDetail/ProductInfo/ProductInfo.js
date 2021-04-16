@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
+import CartModal from './CartModal/CartModal';
 
 class ProductInfo extends Component {
+  state = {
+    isCartModalOn: false,
+  };
+
+  showCartModal = () => {
+    this.setState({ isCartModalOn: !this.state.isCartModalOn });
+  };
+
   render() {
     const { item } = this.props;
     return (
@@ -19,7 +28,11 @@ class ProductInfo extends Component {
         <div className="product_info_name">{item.name}</div>
         <div className="product_info_icons">
           {item.icons.map(icon => {
-            return <span>{icon}</span>;
+            return (
+              <>
+                <span>{icon}</span>;
+              </>
+            );
           })}
         </div>
         <div className="product_amount">
@@ -37,10 +50,17 @@ class ProductInfo extends Component {
           <span>{item.delivery[Object.keys(item.delivery)[0]]}</span>
         </div>
         <div className="button_list">
-          <button className="store_cart">장바구니 담기</button>
-          <button className="buy">구매하기</button>
+          <button className="store_cart" onClick={this.showCartModal}>
+            장바구니 담기
+          </button>
+          <button className="buy" onClick={this.showCartModal}>
+            구매하기
+          </button>
           <button className="present">선물하기</button>
         </div>
+        {this.state.isCartModalOn && (
+          <CartModal showCartModal={this.showCartModal} />
+        )}
       </div>
     );
   }

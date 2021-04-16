@@ -1,0 +1,80 @@
+@import '../../../../Styles/common.scss';
+
+.cart_modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  background-color: $PrimaryGrey;
+
+  .mordal_container {
+    padding: 80px 0;
+    text-align: center;
+
+    .wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+
+      .contents_container {
+        padding: 20px 0;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid $PrimaryGreen;
+        border-bottom: 1px solid $PrimaryGreen;
+        .right {
+          .amount {
+            margin-right: 10px;
+          }
+          .cal_amount {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+
+    .total_price {
+      max-width: 900px;
+      margin: 0 auto;
+      padding-top: 10px;
+      text-align: end;
+      font-weight: bold;
+    }
+
+    .buttons_container {
+      padding: 20px 90px;
+      max-width: 900px;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+
+      button {
+        width: 100%;
+        background-color: $PrimaryWhite;
+        padding: 10px 0;
+        font-size: 20px;
+        cursor: pointer;
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .interested {
+        border: 1px solid darkgray;
+      }
+      .put_cart {
+        border: 1px solid $PrimaryGreen;
+        color: $PrimaryGreen;
+        font-weight: bold;
+      }
+
+      .buy_directly {
+        border: 1px solid $PrimaryGreen;
+        background-color: $PrimaryGreen;
+        color: $PrimaryWhite;
+        font-weight: bold;
+      }
+    }
+  }
+}
