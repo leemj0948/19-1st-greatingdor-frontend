@@ -26,7 +26,8 @@ class ProductDetail extends Component {
     })
       .then(response => response.json())
       .then(data => {
-        this.setState({ productInfo: data });
+        this.setState({ productInfo: data.RESULT });
+        console.log(data.RESULT);
       });
   };
 
@@ -47,24 +48,24 @@ class ProductDetail extends Component {
 
   render() {
     const { imgNum, productInfo } = this.state;
+    console.log(productInfo);
     return (
       <main className="product_detail">
-        {productInfo.map((item, idx) => {
-          return (
-            <>
-              <Location key={idx} item={item} />
-              <div className="product">
-                <ImageSlider
-                  item={item}
-                  imgNum={imgNum}
-                  goToLeft={this.goToLeft}
-                  goToRight={this.goToRight}
-                />
-                <ProductInfo item={item} />
-              </div>
-            </>
-          );
-        })}
+        {/* {productInfo.map((item, idx) => { */}
+        {/* return (
+        <> */}
+        <Location item={productInfo} />
+        <div className="product">
+          <ImageSlider
+            item={productInfo}
+            imgNum={imgNum}
+            goToLeft={this.goToLeft}
+            goToRight={this.goToRight}
+          />
+          <ProductInfo item={productInfo} />
+        </div>
+        {/* </>
+        ); ? })} */}
         <ProductDescription />
       </main>
     );

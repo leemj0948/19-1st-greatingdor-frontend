@@ -5,7 +5,9 @@ class Location extends Component {
     const { item } = this.props;
     return (
       <div className="location">
-        <span>{item.status}</span>
+        <span>
+          HOME > {item.menu_name} > {item.category_name}
+        </span>
       </div>
     );
   }
