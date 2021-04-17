@@ -10,9 +10,9 @@ class ProductInfo extends Component {
 
   showCartModal = () => {
     this.setState({ isCartModalOn: !this.state.isCartModalOn });
-    fetch('/data/cartData.json')
+    fetch('/data/productData.json')
       .then(response => response.json())
-      .then(data => this.setState({ cartData: data }));
+      .then(data => this.setState({ cartData: data.RESULT }));
   };
 
   render() {
@@ -32,26 +32,42 @@ class ProductInfo extends Component {
           </span>
         </div>
         <div className="product_info_name">{item.title}</div>
-        {/* 추후 tags key로 받아올 예정 */}
-        {/* <div className="product_info_icons">
-          {item.icons.map(icon => {
-            return (
-              <>
-                <span>{icon}</span>;
-              </>
-            );
-          })}
-        </div> */}
+        <div className="product_info_icons">
+          {item.tags &&
+            item.tags.map((icon, idx) => {
+              return (
+                <>
+                  <span key={idx}>{icon}</span>
+                </>
+              );
+            })}
+        </div>
         <div className="product_amount">
           <span>용량</span>
-          <span>{item.capacity}</span>
+          <span>{item.capacity} g</span>
         </div>
         <div className="product_calorie">
           <span>칼로리</span>
-          <span>{item.kcal}</span>
+          <span>{item.kcal} kcal</span>
         </div>
-        <div className="product_origin">밀가루(밀:미국,캐나다산)</div>
-        <div className="product_price">{item.price}</div>
+        {/* 나중에 백에서 추가 데이터 받을 예정 */}
+        {/* <div className="product_origin">밀가루(밀:미국,캐나다산)</div> */}
+        <div className="product_price">
+          {item.discount_rate !== '0' ? (
+            <>
+              <span className="discount_price">
+                {(item.price * (1 - item.discount_rate)).toLocaleString()}원
+              </span>
+              <span className="original_price">
+                {(item.price * 1).toLocaleString()}원
+              </span>
+            </>
+          ) : (
+            <span className="discount_price">
+              {(item.price * (1 - item.discount_rate)).toLocaleString()}원
+            </span>
+          )}
+        </div>
         <div className="product_delivery">
           <span className="delivery">택배배송</span>
           <span>5pm 이전 결제시 4월 17일(토) 도착 가능</span>

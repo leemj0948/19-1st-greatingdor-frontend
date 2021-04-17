@@ -43,6 +43,16 @@
     font-weight: bold;
     padding: 10px 0;
     font-size: 30px;
+
+    .discount_price {
+      margin-right: 10px;
+    }
+
+    .original_price {
+      font-size: 15px;
+      color: darkgray;
+      text-decoration: line-through;
+    }
   }
   .product_delivery {
     padding: 20px 0;

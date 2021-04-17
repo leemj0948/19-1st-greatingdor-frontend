@@ -2,15 +2,19 @@
   "RESULT": {
     "capacity": 255,
     "category_name": "샐러드",
+    "content": "https://github.com/hiyee-gj/imagefile/blob/master/detail1.jpg?raw=true",
     "description": "어제까지 친구들과 노닐던 돼지를 잡아 만든",
     "discount_rate": "0.250",
-    "id": 1,
-    "is_new": true,
+    "images": [
+      "https://github.com/hiyee-gj/imagefile/blob/master/%EC%86%8C%EA%B3%A0%EA%B8%B0%EC%83%90%EB%9F%AC%EB%93%9C.jpg?raw=true",
+      "test",
+      "test22",
+      "test33"
+    ],
     "kcal": 425,
     "menu_name": "건강마켓",
-    "price": "60000,00",
-    "product_id": 1,
-    "store_method": "냉장",
+    "price": "60000.00",
+    "tags": ["목살", "샐러드", "스테이크"],
     "title": "목살스테이크 샐러드"
   }
 }

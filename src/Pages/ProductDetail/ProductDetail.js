@@ -13,59 +13,29 @@ class ProductDetail extends Component {
     super();
 
     this.state = {
-      imgNum: 1,
       productInfo: [],
     };
   }
 
   componentDidMount = () => {
-    setInterval(this.goToRight, 3000);
-
-    fetch('/data/productData.json', {
-      method: 'GET',
-    })
+    // 실제 fetch시에는 productId={item.id}와 같이  queryString의 형태로 클릭한 제품의 id를 보내는 것!
+    fetch('/data/productData.json')
       .then(response => response.json())
       .then(data => {
         this.setState({ productInfo: data.RESULT });
-        console.log(data.RESULT);
       });
   };
 
-  goToLeft = () => {
-    this.setState({
-      imgNum:
-        this.state.imgNum <= 3 && this.state.imgNum > 1
-          ? this.state.imgNum - 1
-          : 3,
-    });
-  };
-
-  goToRight = () => {
-    this.setState({
-      imgNum: this.state.imgNum >= 3 ? 1 : this.state.imgNum + 1,
-    });
-  };
-
   render() {
-    const { imgNum, productInfo } = this.state;
+    const { productInfo } = this.state;
     console.log(productInfo);
     return (
       <main className="product_detail">
-        {/* {productInfo.map((item, idx) => { */}
-        {/* return (
-        <> */}
         <Location item={productInfo} />
         <div className="product">
-          <ImageSlider
-            item={productInfo}
-            imgNum={imgNum}
-            goToLeft={this.goToLeft}
-            goToRight={this.goToRight}
-          />
+          <ImageSlider item={productInfo} />
           <ProductInfo item={productInfo} />
         </div>
-        {/* </>
-        ); ? })} */}
         <ProductDescription />
       </main>
     );
