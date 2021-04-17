@@ -6,7 +6,7 @@ class CartModal extends Component {
     const { cartData } = this.props;
     return (
       <div className="cart_modal">
-        <div className="mordal_container">
+        <div className="modal_container">
           <div className="wrapper">
             <div className="contents_container">
               <span>{cartData.title}</span>
