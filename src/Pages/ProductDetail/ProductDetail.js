@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Footer from '../../Components/Footer/Footer';
 import NavBar from '../../Components/NavBar/NavBar';
 
 export class ProductDetail extends Component {
@@ -11,6 +12,7 @@ export class ProductDetail extends Component {
         </div>
         {/* navbar */}
         <NavBar />
+
         {/* product detail */}
         <main className="product_detail">
           <div className="location">
