@@ -6,10 +6,15 @@ import './NavBar.scss';
 
 class NavBar extends Component {
   state = {
+    navSearchInput: '',
     isClicked: false,
     CategoryDropdown: false,
     CustomerDropdown: false,
     SearchDropdown: false,
+  };
+
+  handleInputContent = e => {
+    this.setState({ navSearchInput: e.target.value });
   };
 
   handleCategoryDropDown = () => {
@@ -34,6 +39,7 @@ class NavBar extends Component {
     ];
 
     const {
+      navSearchInput,
       isClicked,
       CategoryDropdown,
       CustomerDropdown,
@@ -93,11 +99,16 @@ class NavBar extends Component {
               );
             })}
             <div className="navbar_search_form">
-              <input className="navbar_search_input" />
+              <input
+                className="navbar_search_input"
+                onChange={this.handleInputContent}
+              />
               {/* dropdown 2 - search부문*/}
               <button
                 className="search_btn"
-                onClick={this.handleSearchDropdown}
+                //검색 버튼 onclick시 input값이 있으면 바로 검색창으로 넘어가고 => 이부분 어떻게 처리?
+                //빈 값이면 드롭다운 열리게 처리
+                onClick={!navSearchInput && this.handleSearchDropdown}
               >
                 <i className="fas fa-search"></i>
               </button>

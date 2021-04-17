@@ -4,8 +4,11 @@ import './SearchDropDown.scss';
 
 class SearchDropDown extends Component {
   state = {
+    searchInput: '',
     searchItemList: [],
   };
+
+  // 상품 카테고리 목록 받아오기
   componentDidMount = () => {
     fetch('/data/SearchItems.json')
       .then(response => response.json())
@@ -14,8 +17,36 @@ class SearchDropDown extends Component {
       });
   };
 
+  // 검색창 드롭다운 Toggling
   onClickHandler = () => {
     this.props.handleDropDown();
+  };
+
+  // 인풋값 받기
+  handleInputContent = e => {
+    this.setState({ searchInput: e.target.value });
+  };
+
+  // 검색
+  handleItemSearch = () => {
+    const { searchInput } = this.state;
+    fetch(`http://10.58.6.28:8000/products/search?search=${searchInput}`)
+      .then(response => response.json())
+      // 검색된 페이지로 이동
+      .then(data => console.log(data));
+  };
+
+  // 엔터 => 검색
+  submitWithEnter = e => {
+    e.preventDefault();
+    if (e.keyCode === 13) {
+      this.handleItemSearch();
+    }
+  };
+
+  // 클릭 => 검색
+  submitWithClick = () => {
+    this.handleItemSearch();
   };
 
   render() {
@@ -31,8 +62,16 @@ class SearchDropDown extends Component {
             </button>
           </div>
           <div className="second_container">
-            <input type="text" placeholder="검색어를 입력해 주세요." />
-            <i className="fas fa-search"></i>
+            <form action="" onSubmit={this.submitWithEnter}>
+              <input
+                type="text"
+                placeholder="검색어를 입력해 주세요."
+                onChange={this.handleInputContent}
+              />
+              <button onClick={this.submitWithClick}>
+                <i className="fas fa-search"></i>
+              </button>
+            </form>
           </div>
         </div>
         <div className="search_items">
