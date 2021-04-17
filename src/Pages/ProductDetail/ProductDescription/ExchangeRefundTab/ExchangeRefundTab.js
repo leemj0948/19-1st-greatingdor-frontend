@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
 
-class ExchangeRefund extends Component {
+class ExchangeRefundTab extends Component {
+  state = {
+    imageData: [],
+  };
+  componentDidMount = () => {
+    fetch('http://10.58.2.110:8000/details/under/7')
+      .then(response => response.json())
+      .then(data => this.setState({ imageData: data.RESULT }));
+  };
   render() {
+    const { imageData } = this.state;
+    console.log(imageData);
     return (
       <div>
-        <h1>this is exchange/refund tab</h1>
+        <img src={imageData}></img>
       </div>
     );
   }
 }
 
-export default ExchangeRefund;
+export default ExchangeRefundTab;
