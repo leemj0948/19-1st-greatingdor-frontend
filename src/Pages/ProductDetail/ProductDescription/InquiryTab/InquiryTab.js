@@ -49,7 +49,7 @@ class InquiryTab extends Component {
                       <span className="title">{inquiry.title}</span>
                     </div>
                     <div className="right">
-                      <span className="user_id">{inquiry.userId}</span>
+                      <span className="user_id">{inquiry.userId} |</span>
                       <span className="date">{inquiry.date}</span>
                       <span
                         className="icon"

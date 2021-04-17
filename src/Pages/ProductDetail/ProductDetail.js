@@ -28,7 +28,6 @@ class ProductDetail extends Component {
 
   render() {
     const { productInfo } = this.state;
-    console.log(productInfo);
     return (
       <main className="product_detail">
         <Location item={productInfo} />

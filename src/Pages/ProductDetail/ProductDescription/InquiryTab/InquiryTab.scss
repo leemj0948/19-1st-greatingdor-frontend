@@ -13,9 +13,26 @@
   }
 
   .inquiry_container {
-    .contents {
-      display: flex;
-      justify-content: space-between;
+    .inquiry_contents {
+      padding: 10px 0;
+      border-bottom: 1px solid $PrimaryLightGreen;
+      .contents {
+        display: flex;
+        justify-content: space-between;
+
+        .title_container {
+          font-weight: bold;
+        }
+
+        .right {
+          .user_id,
+          .date {
+            margin-right: 10px;
+            color: darkgray;
+            font-weight: bold;
+          }
+        }
+      }
     }
   }
 }
