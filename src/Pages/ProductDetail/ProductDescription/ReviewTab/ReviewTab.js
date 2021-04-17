@@ -17,19 +17,15 @@ class ReviewTab extends Component {
   };
 
   handleDropdown = id => {
-    // 댓글 toggling 구현
     if (this.state.reviewId === id) {
-      // 0이 닫힌 상태이므로 id값이 0이 아닌 값이면 열린 상태이므로 닫고
       this.setState({ reviewId: 0 });
     } else {
-      // 0으로 닫혀있으면 열기
       this.setState({ reviewId: id });
     }
   };
 
   render() {
     const { reviewData, reviewId } = this.state;
-    console.log(this.state.reviewId);
     return (
       <>
         <div className="review_header">
@@ -57,7 +53,7 @@ class ReviewTab extends Component {
                     <span className="user_id">{review.userId}</span>
                     <span className="date">{review.date}</span>
                   </div>
-                  {reviewId === idx + 1 && <DropDown review={review} />}
+                  {reviewId === idx + 1 && <DropDown item={review} />}
                 </div>
               </li>
             );

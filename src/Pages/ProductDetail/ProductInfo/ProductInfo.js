@@ -17,7 +17,7 @@ class ProductInfo extends Component {
 
   render() {
     const { item } = this.props;
-    const { cartData } = this.state;
+    const { cartData, isCartModalOn } = this.state;
     return (
       <div className="product_info">
         <div className="product_info_header">
@@ -32,7 +32,7 @@ class ProductInfo extends Component {
           </span>
         </div>
         <div className="product_info_name">{item.title}</div>
-        {/* tags로 접근 */}
+        {/* 추후 tags key로 받아올 예정 */}
         {/* <div className="product_info_icons">
           {item.icons.map(icon => {
             return (
@@ -65,7 +65,7 @@ class ProductInfo extends Component {
           </button>
           <button className="present">선물하기</button>
         </div>
-        {this.state.isCartModalOn && (
+        {isCartModalOn && (
           <CartModal showCartModal={this.showCartModal} cartData={cartData} />
         )}
       </div>

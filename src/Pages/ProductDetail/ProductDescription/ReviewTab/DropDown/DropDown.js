@@ -3,12 +3,12 @@ import './DropDown.scss';
 
 class DropDown extends Component {
   render() {
-    const { review, inquiry } = this.props;
+    const { item } = this.props;
 
     return (
       <div className="dropdown">
-        <div className="option">{review.option}</div>
-        <p className="contents">{review.contents}</p>
+        <div className="option">{item.option}</div>
+        <p className="contents">{item.contents}</p>
       </div>
     );
   }

@@ -17,19 +17,15 @@ class InquiryTab extends Component {
   };
 
   handleDropdown = id => {
-    // 댓글 toggling 구현
     if (this.state.inquiryId === id) {
-      // 0이 닫힌 상태이므로 id값이 0이 아닌 값이면 열린 상태이므로 닫고
       this.setState({ inquiryId: 0 });
     } else {
-      // 0으로 닫혀있으면 열기
       this.setState({ inquiryId: id });
     }
   };
 
   render() {
     const { inquiryData, inquiryId } = this.state;
-    console.log(this.state.inquiryData);
     return (
       <div className="inquiry_tab">
         <div className="inquiry_header">
@@ -63,7 +59,7 @@ class InquiryTab extends Component {
                       </span>
                     </div>
                   </div>
-                  {inquiryId === idx + 1 && <DropDown inquiry={inquiry} />}
+                  {inquiryId === idx + 1 && <DropDown item={inquiry} />}
                 </div>
               </li>
             );
