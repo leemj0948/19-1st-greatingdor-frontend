@@ -6,19 +6,19 @@ class Footer extends Component {
   render() {
     return (
       <footer id="footer">
-        <div className="footer_first">
-          <div className="footer_first_list">
+        <div className="footer_header">
+          <div className="footer_header_list">
             <span>
-              <Link href="#">회사소개 |</Link>
+              <Link to="#">회사소개 |</Link>
             </span>
             <span>
-              <Link href="#">이용약관 |</Link>
+              <Link to="#">이용약관 |</Link>
             </span>
             <span className="personal_info">
-              <Link href="#">개인정보처리방침 |</Link>
+              <Link to="#">개인정보처리방침 |</Link>
             </span>
             <span>
-              <Link href="#">멤버십 프로그램</Link>
+              <Link to="#">멤버십 프로그램</Link>
             </span>
           </div>
           <select className="family_site">
@@ -27,7 +27,7 @@ class Footer extends Component {
             <option>더현대닷컴</option>
           </select>
         </div>
-        <div className="footer_second">
+        <div className="footer_contents">
           <div className="customer_center">
             <div className="customer_center_title">고객센터</div>
             <div className="phone">1800-0700</div>
@@ -35,27 +35,27 @@ class Footer extends Component {
             <div>공휴일 7시~ 13시 (일요일 휴무)</div>
             <div>카카오톡@그리팅 친구 추가하고 소식과 혜택을 받아보세요.</div>
             <div className="social_media">
-              <Link
+              <a
                 href="https://www.instagram.com/greating.official/"
                 target="_blank"
               >
                 <i className="fab fa-instagram"></i>
-              </Link>
-              <Link
-                href="hhttps://www.youtube.com/channel/UClyxH287Qe5OEWxCPXRRvHg"
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UClyxH287Qe5OEWxCPXRRvHg"
                 target="_blank"
               >
                 <i className="fab fa-youtube"></i>
-              </Link>
-              <Link href="https://blog.naver.com/h_greating" target="_blank">
+              </a>
+              <a href="https://blog.naver.com/h_greating" target="_blank">
                 <i className="fab fa-blogger"></i>
-              </Link>
-              <Link
+              </a>
+              <a
                 href="https://accounts.kakao.com/login?continue=http%3A%2F%2Fpf.kakao.com%2F_xjuhtT%2Fchat%3Fapi_ver%3D1.0%26kakao_agent%3Dsdk%252F1.39.14%2520os%252Fjavascript%2520sdk_type%252Fjavascript%2520lang%252Fko-KR%2520device%252FWin32%2520origin%252Fhttps%25253A%25252F%25252Fwww.greating.co.kr%26app_key%3D3ee3b3c91fa6a9e9be6b05253143a90b%26referer%3Dhttps%253A%252F%252Fwww.greating.co.kr%252Fmarket%252FmarketDetail%253FitemId%253D100861"
                 target="_blank"
               >
                 <i className="fas fa-comments"></i>
-              </Link>
+              </a>
             </div>
           </div>
           <div className="company_info">

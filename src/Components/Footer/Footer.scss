@@ -6,13 +6,13 @@
   padding: 20px;
   background-color: $PrimaryGrey;
 
-  .footer_first {
+  .footer_header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
 
-    .footer_first_list {
+    .footer_header_list {
       span.personal_info {
         font-weight: bold;
       }
@@ -30,7 +30,7 @@
     }
   }
 
-  .footer_second {
+  .footer_contents {
     display: flex;
     justify-content: space-between;
     .customer_center {
