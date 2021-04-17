@@ -1,14 +1,13 @@
-@import '../../../Styles/common.scss';
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+@import '../../../Styles/common.scss';
 
 .marketList {
-  width: 1440px;
+  margin: 0px auto;
+  width: 1800px;
   height: 350px;
 
-  h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  h1 {
+    @extend %flex-center;
     height: 50px;
     font-size: x-large;
     font-weight: 700;
@@ -16,35 +15,47 @@
   .category {
     display: flex;
     justify-content: center;
-    width: 1440px;
+    width: 1800px;
     height: 300px;
-    .button {
+    .categoryButton {
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
-      width: 650px;
+      width: 900px;
       height: 210px;
     }
   }
   .buttonList {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @extend %flex-center;
     margin: 5px;
-    width: 80px;
-    height: 80px;
+    width: 114px;
+    height: 114px;
     border-radius: 100%;
     background-color: $PrimaryGrey;
-    font-size: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    &.true {
+      background-color: $PrimaryGreen;
+    }
+    &.false {
+      background-color: $PrimaryGrey;
+    }
+
     &:hover {
       background-color: rgb(226, 226, 199);
     }
+    a:active,
+    a:visited {
+      @extend %flex-center;
+      width: 80px;
+      height: 80px;
+      border-radius: 100%;
+      background-color: $PrimaryGreen;
+    }
     .icons {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @extend %flex-center;
       padding: 5px;
-      font-size: 20px;
+      font-size: 30px;
     }
   }
 }

@@ -8,6 +8,7 @@ class AdBanner extends Component {
       display: 'none',
     };
   }
+
   imgChangeLeft = () => {
     if (this.state.img > 3) {
       this.setState({
@@ -19,10 +20,8 @@ class AdBanner extends Component {
       });
     }
   };
+
   imgChangeRight = () => {
-    this.setState({
-      img: 4,
-    });
     if (this.state.img <= 1) {
       this.setState({
         img: 4,
@@ -33,50 +32,50 @@ class AdBanner extends Component {
       });
     }
   };
+
   buttonDisplayOn = () => {
     this.setState({
       display: 'block',
     });
   };
+
   buttonDisplayOff = () => {
     this.setState({
       display: 'none',
     });
   };
+
   componentDidMount() {
     setInterval(this.imgChangeLeft, 5000);
   }
 
   render() {
     return (
-      <div>
+      <>
         <div
           className="mainBanner"
           onPointerOver={this.buttonDisplayOn}
           onPointerOut={this.buttonDisplayOff}
         >
-          <botton
+          <button
             className="leftArrow"
             onClick={this.imgChangeLeft}
             style={{ display: this.state.display }}
           >
             <i class="fas fa-chevron-left"></i>
-          </botton>
+          </button>
           <img src={`/data/img/${this.state.img}.jpg`} alt="배너이미지" />
-          <botton
+          <button
             className="rightArrow"
             onClick={this.imgChangeRight}
             style={{ display: this.state.display }}
           >
             <i class="fas fa-chevron-right"></i>
-          </botton>
+          </button>
         </div>
-      </div>
+      </>
     );
   }
 }
 
 export default AdBanner;
-<div className="mainBanner">
-  <img src="" alt="" />
-</div>;

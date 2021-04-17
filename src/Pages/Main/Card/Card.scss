@@ -1,0 +1,60 @@
+@import '../../../Styles/common.scss';
+
+.cards {
+  @extend %flex-center;
+  flex-wrap: wrap;
+  margin: 0px auto;
+  width: 1100px;
+  box-sizing: border-box;
+  .img {
+    margin: 10px;
+    width: 340px;
+    height: 513px;
+    font-weight: bold;
+    border-bottom: 1px solid gray;
+    .imgFrame {
+      position: relative;
+      width: 340px;
+      height: 340px;
+      overflow: hidden;
+      .new {
+        position: absolute;
+        @extend %flex-center;
+        top: 10px;
+        left: 0;
+        width: 100px;
+        height: 40px;
+        background-color: rgb(241, 152, 81);
+        font-size: 30px;
+        font-weight: 800;
+        text-align: center;
+      }
+    }
+    img {
+      width: 340px;
+      height: 340px;
+      &:hover {
+        transform: scale(1.4);
+        transition: all 0.5s ease-in-out;
+      }
+    }
+    .sub {
+      margin-top: 15px;
+      width: 340px;
+      height: 24px;
+      color: #555;
+      font-size: 17px;
+      font-weight: 400;
+    }
+    .title {
+      width: 340px;
+      height: 56px;
+      font-size: 20px;
+    }
+    .price {
+      width: 340px;
+      height: 24px;
+      font-size: 20px;
+    }
+  }
+}

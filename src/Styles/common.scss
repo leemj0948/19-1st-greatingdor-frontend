@@ -1,7 +1,13 @@
-$PrimaryGreen:rgb(127,124,20);
-$PrimaryLightGreen:rgb(226,226,199);
-$PrimaryWhite:rgb(255,255,255);
-$PrimaryYellow:rgb(222,172,49);
-$PrimaryBlack:rgb(19,19,19);
-$PrimaryGrey:rgb(242,242,242);
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+$PrimaryGreen: rgb(127, 124, 20);
+$PrimaryLightGreen: rgb(226, 226, 199);
+$PrimaryWhite: rgb(255, 255, 255);
+$PrimaryYellow: rgb(222, 172, 49);
+$PrimaryBlack: rgb(19, 19, 19);
+$PrimaryGrey: rgb(242, 242, 242);
 
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

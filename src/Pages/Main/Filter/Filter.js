@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Category from './Category';
 import './Filter.scss';
 
 class Filter extends Component {
@@ -7,23 +8,43 @@ class Filter extends Component {
     this.state = {
       hover: '',
       fontColor: '',
+      isCategorySelect: Array(TITLES.length).fill(false).fill(true, 0, 1),
     };
   }
+
+  handleClick = idx => {
+    const newArr = Array(TITLES.length).fill(false);
+    newArr[idx] = true;
+    this.setState({
+      isCategorySelect: newArr,
+      // isClicked: this.state.isClicked.map((element, index) => {
+      //   return index === idx ? !element : element;
+      // if (index === idx) {
+      //   !element;
+      // } else {
+      //   element;
+      // }
+    });
+  };
+
   render() {
+    const { isClicked, isCategorySelect } = this.state;
     return (
       <div>
         <div className="marketList">
-          <h2 className="title">건강마켓</h2>
+          <h1 className="title">건강마켓</h1>
           <section className="category">
-            <ul className="button">
-              {TITLES.map(elm => {
+            <ul className="categoryButton">
+              {TITLES.map((elm, index) => {
                 return (
-                  <li className="buttonList" onPointerOver={this.hoverColor}>
-                    <a>
-                      <span className="icons">{elm.icon}</span>
-                      {elm.content}
-                    </a>
-                  </li>
+                  <Category
+                    key={index}
+                    icon={elm.icon}
+                    content={elm.content}
+                    isSelected={isCategorySelect[index]}
+                    handleClick={this.handleClick}
+                    elementIndex={index}
+                  />
                 );
               })}
             </ul>
