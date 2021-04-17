@@ -8,7 +8,7 @@ class CategoryDropDown extends Component {
   };
 
   componentDidMount = () => {
-    fetch('http://10.58.2.110:8000/products/categories')
+    fetch('/data/MenuItems.json')
       .then(response => response.json())
       .then(data => {
         this.setState({ menuItemList: data.RESULT });
