@@ -1,4 +1,3 @@
-import { doc } from 'prettier';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import CategoryDropDown from './CategoryDropDown/CategoryDropDown';
@@ -54,7 +53,6 @@ class NavBar extends Component {
             <span>
               <Link to="#">쿠폰등록 </Link>
             </span>
-            {/* dropdown 2 - 고객센터부문 */}
             <span onClick={this.handleCustomerDropDown}>
               <Link to="#">
                 고객센터
@@ -96,7 +94,7 @@ class NavBar extends Component {
             })}
             <div className="navbar_search_form">
               <input className="navbar_search_input" />
-              {/* dropdown 3 - search부문*/}
+              {/* dropdown 2 - search부문*/}
               <button
                 className="search_btn"
                 onClick={this.handleSearchDropdown}
@@ -109,7 +107,6 @@ class NavBar extends Component {
               </button>
             </div>
           </ul>
-          {/* {SearchDropdown && <SearchDropDown />} */}
           {SearchDropdown && (
             <SearchDropDown handleDropDown={this.handleSearchDropdown} />
           )}

@@ -16,8 +16,8 @@ body {
 
 #navbar {
   .navbar_inner_container {
-    height: 100vh;
     max-width: 1000px;
+    height: 100vh;
     margin: 0 auto;
 
     .navbar_user_area {
@@ -40,23 +40,19 @@ body {
     }
 
     .navbar_categories {
-      padding: 20px;
       @extend %flex-space-between;
       align-items: center;
-
       position: sticky;
       top: 0;
+      padding: 20px;
 
       .navbar_category_list {
-        // @extend %flex-space-between;
-
         .navbar_category_burger {
-          margin-right: 6px;
-          font-size: 15px;
           display: flex;
           justify-content: center;
           align-items: center;
-
+          margin-right: 6px;
+          font-size: 15px;
           &:hover {
             color: $PrimaryGreen;
           }
