@@ -9,14 +9,36 @@ class ProductInfo extends Component {
   };
 
   showCartModal = () => {
-    this.setState({ isCartModalOn: !this.state.isCartModalOn });
+    this.onOffCartModal();
     fetch('/data/cartData.json')
       .then(response => response.json())
-      .then(data => this.setState({ cartData: data.RESULT }));
+      .then(data => {
+        this.setState({
+          cartData: data.RESULT.map(cart => {
+            cart.count = 1;
+            return cart;
+          }),
+        });
+      });
   };
 
-  closeCartModal = () => {
-    this.setState({ isCartModalOn: false });
+  // closeCartModal = () => {
+  //   this.setState({ isCartModalOn: false });
+  // };
+
+  onOffCartModal = () => {
+    this.setState({ isCartModalOn: !this.state.isCartModalOn });
+  };
+
+  changeCount = (count, option_id) => {
+    this.setState({
+      cartData: this.state.cartData.map(cart => {
+        if (cart.option_id === option_id) {
+          cart.count = count;
+        }
+        return cart;
+      }),
+    });
   };
 
   render() {
@@ -89,8 +111,9 @@ class ProductInfo extends Component {
         {isCartModalOn && (
           <CartModal
             showCartModal={this.showCartModal}
-            closeCartModal={this.closeCartModal}
+            onOffCartModal={this.onOffCartModal}
             cartData={cartData}
+            changeCount={this.changeCount}
           />
         )}
       </div>

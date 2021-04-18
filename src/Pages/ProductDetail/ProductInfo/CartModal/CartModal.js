@@ -2,24 +2,17 @@ import React, { Component } from 'react';
 import './CartModal.scss';
 
 class CartModal extends Component {
-  state = {
-    amountCount: 1,
-  };
-
-  handleAmountInput = e => {
-    this.setState({ amountCount: Number(e.target.value) });
-  };
-
-  substractAmount = () => {
-    if (this.state.amountCount === 0) {
+  substractAmount = (val, idx) => {
+    val = Number(val);
+    if (val === 0) {
       return;
     }
-    const count = this.state.amountCount - 1;
-    this.setState({ amountCount: count < 0 ? 0 : count });
+    this.props.changeCount(val - 1, idx);
   };
 
-  addAmount = () => {
-    this.setState({ amountCount: this.state.amountCount + 1 });
+  addAmount = (val, idx) => {
+    val = Number(val);
+    this.props.changeCount(val + 1, idx);
   };
 
   goToCart = () => {
@@ -31,12 +24,11 @@ class CartModal extends Component {
   };
 
   onClickHandler = () => {
-    this.props.closeCartModal();
+    this.props.onOffCartModal();
   };
   render() {
     const { cartData } = this.props;
-    const { amountCount } = this.state;
-
+    console.log(cartData);
     return (
       <div className="cart_modal">
         <div className="modal_container">
@@ -55,16 +47,26 @@ class CartModal extends Component {
                     <span className="cal_amount">
                       <button
                         className="minus_btn"
-                        onClick={this.substractAmount}
+                        onClick={() =>
+                          this.substractAmount(
+                            cartItem.count,
+                            cartItem.option_id
+                          )
+                        }
                       >
                         -
                       </button>
                       <input
                         className="amount_status"
-                        value={this.state.amountCount}
+                        value={cartItem.count}
                         onChange={this.handleAmountInput}
                       />
-                      <button className="plus_btn" onClick={this.addAmount}>
+                      <button
+                        className="plus_btn"
+                        onClick={() =>
+                          this.addAmount(cartItem.count, cartItem.option_id)
+                        }
+                      >
                         +
                       </button>
                     </span>
@@ -77,8 +79,7 @@ class CartModal extends Component {
             })}
           </div>
           <div className="total_price">
-            {/* 모든 옵션의 가격*수량 더한 금액으로 구현 */}총 금액:{' '}
-            {amountCount.toLocaleString()}원
+            {/* 모든 옵션의 가격*수량 더한 금액으로 구현 */}총 금액: {}원
           </div>
 
           <div className="buttons_container">
