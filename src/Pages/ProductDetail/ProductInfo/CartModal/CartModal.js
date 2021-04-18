@@ -2,11 +2,17 @@ import React, { Component } from 'react';
 import './CartModal.scss';
 
 class CartModal extends Component {
+  onClickHandler = () => {
+    this.props.closeCartModal();
+  };
   render() {
     const { cartData } = this.props;
     return (
       <div className="cart_modal">
         <div className="modal_container">
+          <button className="close_btn" onClick={this.onClickHandler}>
+            옵션 닫기
+          </button>
           <div className="wrapper">
             <div className="contents_container">
               <span>{cartData.title}</span>

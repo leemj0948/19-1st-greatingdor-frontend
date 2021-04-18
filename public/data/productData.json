@@ -1,5 +1,6 @@
 {
   "RESULT": {
+    "product_id": 1,
     "capacity": 255,
     "category_name": "샐러드",
     "content": "https://github.com/hiyee-gj/imagefile/blob/master/detail1.jpg?raw=true",

@@ -15,6 +15,10 @@ class ProductInfo extends Component {
       .then(data => this.setState({ cartData: data.RESULT }));
   };
 
+  closeCartModal = () => {
+    this.setState({ isCartModalOn: false });
+  };
+
   render() {
     const { item } = this.props;
     const { cartData, isCartModalOn } = this.state;
@@ -82,7 +86,11 @@ class ProductInfo extends Component {
           <button className="present">선물하기</button>
         </div>
         {isCartModalOn && (
-          <CartModal showCartModal={this.showCartModal} cartData={cartData} />
+          <CartModal
+            showCartModal={this.showCartModal}
+            closeCartModal={this.closeCartModal}
+            cartData={cartData}
+          />
         )}
       </div>
     );
