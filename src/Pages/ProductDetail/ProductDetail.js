@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Footer from '../../Components/Footer/Footer';
 import NavBar from '../../Components/NavBar/NavBar';
 
 export class ProductDetail extends Component {
