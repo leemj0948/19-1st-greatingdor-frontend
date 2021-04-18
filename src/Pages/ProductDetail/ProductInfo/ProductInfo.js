@@ -74,8 +74,9 @@ class ProductInfo extends Component {
         </div>
         <div className="product_delivery">
           <span className="delivery">택배배송</span>
-          <span>5pm 이전 결제시 4월 17일(토) 도착 가능</span>
+          <div>5pm 이전 결제시 4월 17일(토) 도착 가능</div>
         </div>
+
         <div className="button_list">
           <button className="store_cart modal_on" onClick={this.showCartModal}>
             장바구니 담기

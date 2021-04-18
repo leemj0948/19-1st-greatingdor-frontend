@@ -10,30 +10,35 @@
   background: rgba(0, 0, 0, 0.7);
 
   .modal_container {
-    position: relative;
+    .btn_container {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
 
-    .close_btn {
-      position: absolute;
-      top: -50px;
-      right: 300px;
-      width: 200px;
-      height: 50px;
-      border: 1px solid $PrimaryBlack;
-      background-color: $PrimaryBlack;
-      color: $PrimaryWhite;
-      font-size: 20px;
-      cursor: pointer;
-      &:focus {
-        outline: none;
+      .close_btn {
+        position: absolute;
+        top: -130px;
+        right: 0px;
+        width: 200px;
+        height: 50px;
+        border: 1px solid $PrimaryBlack;
+        background-color: $PrimaryBlack;
+        color: $PrimaryWhite;
+        font-size: 20px;
+        cursor: pointer;
+        &:focus {
+          outline: none;
+        }
       }
     }
+
     // modal box 자체 스타일링
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
     z-index: 10000;
-    background-color: $PrimaryGrey;
+    background-color: $PrimaryWhite;
     padding: 80px 0;
     text-align: center;
 
@@ -42,18 +47,42 @@
       margin: 0 auto;
 
       .contents_container {
-        padding: 20px 0;
-        font-size: 20px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        font-size: 30px;
         border-top: 1px solid $PrimaryGreen;
         border-bottom: 1px solid $PrimaryGreen;
+
         .right {
           .amount {
             margin-right: 10px;
           }
           .cal_amount {
             margin-right: 10px;
+
+            .minus_btn,
+            .plus_btn {
+              width: 50px;
+              font-size: 30px;
+              background-color: $PrimaryGreen;
+              border: 1px solid $PrimaryGreen;
+              cursor: pointer;
+              &:focus {
+                outline: none;
+              }
+            }
+
+            .amount_status {
+              width: 100px;
+              font-size: 30px;
+              text-align: center;
+              border: 1px solid $PrimaryGreen;
+              &:focus {
+                outline: none;
+              }
+            }
           }
         }
       }
@@ -61,44 +90,46 @@
 
     .total_price {
       max-width: 900px;
-      margin: 0 auto;
-      padding-top: 10px;
+      margin: 5px auto;
+      padding: 20px;
       text-align: end;
+      font-size: 30px;
       font-weight: bold;
     }
 
     .buttons_container {
-      padding: 20px 90px;
-      max-width: 900px;
       display: flex;
       justify-content: space-between;
+      max-width: 900px;
+      padding: 20px 90px;
       margin: 0 auto;
 
       button {
         width: 100%;
-        background-color: $PrimaryWhite;
         padding: 10px 0;
         font-size: 20px;
         cursor: pointer;
+        background-color: $PrimaryWhite;
         &:focus {
           outline: none;
         }
       }
 
       .interested {
-        border: 1px solid darkgray;
+        font-weight: bold;
+        border: 1px solid $PrimaryBlack;
       }
       .put_cart {
+        font-weight: bold;
         border: 1px solid $PrimaryGreen;
         color: $PrimaryGreen;
-        font-weight: bold;
       }
 
       .buy_directly {
-        border: 1px solid $PrimaryGreen;
-        background-color: $PrimaryGreen;
-        color: $PrimaryWhite;
         font-weight: bold;
+        color: $PrimaryWhite;
+        background-color: $PrimaryGreen;
+        border: 1px solid $PrimaryGreen;
       }
     }
   }
