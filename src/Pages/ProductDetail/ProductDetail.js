@@ -5,7 +5,6 @@ import ImageSlider from './ProductInfo/ImageSlider/ImageSlider';
 import ProductInfo from './ProductInfo/ProductInfo';
 import ProductDescription from './ProductDescription/ProductDescription';
 
-import '@fortawesome/fontawesome-free/js/all.js';
 import './ProductDetail.scss';
 
 class ProductDetail extends Component {
