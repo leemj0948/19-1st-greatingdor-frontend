@@ -16,12 +16,12 @@ class NavBar extends Component {
     this.setState({ navSearchInput: e.target.value });
   };
 
-  handleCategoryDropDown = () => {
-    this.setState({ categoryDropdown: !this.state.categoryDropdown });
-  };
-
-  handleSearchDropdown = () => {
-    this.setState({ searchDropdown: !this.state.searchDropdown });
+  handleDropDown = e => {
+    if (e.target.innerHTML === '카테고리') {
+      this.setState({ categoryDropdown: !this.state.categoryDropdown });
+    } else if (e.target.innerHTML === '') {
+      this.setState({ searchDropdown: !this.state.searchDropdown });
+    }
   };
 
   render() {
@@ -70,7 +70,7 @@ class NavBar extends Component {
             <div className="navbar_category_list">
               <button
                 className="navbar_category_burger"
-                onClick={this.handleCategoryDropDown}
+                onClick={this.handleDropDown}
               >
                 <i className="fas fa-bars"></i>
                 <li>
@@ -80,7 +80,7 @@ class NavBar extends Component {
               {categoryDropdown && (
                 <CategoryDropDown
                   isClicked={isClicked}
-                  handleDropDown={this.handleCategoryDropDown}
+                  handleDropDown={this.handleDropDown}
                 />
               )}
             </div>
@@ -101,7 +101,7 @@ class NavBar extends Component {
                 className="search_btn"
                 //검색 버튼 onclick시 input값이 있으면 바로 검색창으로 넘어가고 => 이부분 어떻게 처리?
                 //빈 값이면 드롭다운 열리게 처리
-                onClick={!navSearchInput && this.handleSearchDropdown}
+                onClick={!navSearchInput && this.handleDropDown}
               >
                 <i className="fas fa-search"></i>
               </button>
@@ -110,7 +110,7 @@ class NavBar extends Component {
               </button>
             </div>
             {searchDropdown && (
-              <SearchDropDown handleDropDown={this.handleSearchDropdown} />
+              <SearchDropDown handleDropDown={this.handleDropDown} />
             )}
           </ul>
         </div>
