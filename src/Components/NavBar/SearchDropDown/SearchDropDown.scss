@@ -3,11 +3,11 @@
 .search_dropdown {
   width: 1000px;
   padding: 20px;
-  position: sticky;
-  top: 80px;
+  position: absolute;
+  top: 60px;
+  right: 5px;
   background-color: $PrimaryWhite;
   border: 1px solid $PrimaryGreen;
-  z-index: 9999;
 
   .search_input {
     .first_container {

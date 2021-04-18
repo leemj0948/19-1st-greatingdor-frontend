@@ -109,10 +109,10 @@ class NavBar extends Component {
                 <i className="fas fa-cart-arrow-down"></i>
               </button>
             </div>
+            {searchDropdown && (
+              <SearchDropDown handleDropDown={this.handleSearchDropdown} />
+            )}
           </ul>
-          {searchDropdown && (
-            <SearchDropDown handleDropDown={this.handleSearchDropdown} />
-          )}
         </div>
       </nav>
     );

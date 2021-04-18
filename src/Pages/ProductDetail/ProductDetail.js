@@ -10,21 +10,6 @@ export class ProductDetail extends Component {
           <a href="#">지금 그리팅 가입하고 최대 10만원 쿠폰팩 받으세요 > </a>
         </div>
         <NavBar />
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
       </div>
     );
   }
