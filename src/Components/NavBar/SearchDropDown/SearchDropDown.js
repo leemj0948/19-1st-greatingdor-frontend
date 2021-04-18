@@ -49,6 +49,9 @@ class SearchDropDown extends Component {
     this.handleItemSearch();
   };
 
+  // 드롭다운 선택 아이템 초기화
+  clearSelectedBtn = () => {};
+
   render() {
     const { searchItemList } = this.state;
 
@@ -92,7 +95,9 @@ class SearchDropDown extends Component {
           </ul>
         </div>
         <div className="search_btns">
-          <button className="clear_btn">초기화</button>
+          <button className="clear_btn" onClick={this.clearSelectedBtn}>
+            초기화
+          </button>
           <button className="search_btn">선택완료</button>
         </div>
       </div>
