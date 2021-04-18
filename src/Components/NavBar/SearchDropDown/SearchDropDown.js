@@ -28,13 +28,13 @@ class SearchDropDown extends Component {
   };
 
   // 검색
-  handleItemSearch = () => {
-    const { searchInput } = this.state;
-    fetch(`http://10.58.6.28:8000/products/search?search=${searchInput}`)
-      .then(response => response.json())
-      // 검색된 페이지로 이동
-      .then(data => console.log(data));
-  };
+  // handleItemSearch = () => {
+  //   const { searchInput } = this.state;
+  //   fetch(`http://10.58.1.202:8000/products?search=${searchInput}&page=2`)
+  //     .then(response => response.json())
+  //     // 검색된 페이지로 이동
+  //     .then(data => console.log(data));
+  // };
 
   // 엔터 => 검색
   submitWithEnter = e => {
