@@ -51,8 +51,22 @@ class SearchDropDown extends Component {
   };
 
   // 검색창 드롭다운 아이템 선택
-  handleItemClick = () => {
-    this.setState({ isClicked: !this.state.isClicked });
+  handleItemClick = (num1, num2) => {
+    const { searchItemList } = this.state;
+    const newData = searchItemList.map((item, idx) => {
+      return num1 !== idx
+        ? item
+        : {
+            ...item,
+            category: item.category.map((item2, idx2) => {
+              return num2 !== idx2
+                ? item2
+                : { ...item2, isClicked: !item2.isClicked };
+            }),
+          };
+    });
+
+    this.setState({ searchItemList: newData });
   };
 
   // 검색창 드롭다운 아이템 선택 초기화
