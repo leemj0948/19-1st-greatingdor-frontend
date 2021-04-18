@@ -10,7 +10,7 @@ class ProductInfo extends Component {
 
   showCartModal = () => {
     this.setState({ isCartModalOn: !this.state.isCartModalOn });
-    fetch('/data/productData.json')
+    fetch('/data/cartData.json')
       .then(response => response.json())
       .then(data => this.setState({ cartData: data.RESULT }));
   };

@@ -37,7 +37,6 @@ class CartModal extends Component {
     const { cartData } = this.props;
     const { amountCount } = this.state;
 
-    console.log(this.state.amountCount);
     return (
       <div className="cart_modal">
         <div className="modal_container">
@@ -52,7 +51,6 @@ class CartModal extends Component {
               <div className="right">
                 <span className="amount">수량</span>
                 <span className="cal_amount">
-                  {/*  구현할부분 */}
                   <button className="minus_btn" onClick={this.substractAmount}>
                     -
                   </button>
@@ -86,7 +84,7 @@ class CartModal extends Component {
 
           <div className="buttons_container">
             <button className="interested">
-              <i className="fas fa-heart"></i> 관심상품
+              <i class="far fa-heart"></i> 관심상품
             </button>
             <button className="put_cart" onClick={this.goToCart}>
               장바구니 담기

@@ -3,6 +3,8 @@ import InformatonTab from './InformationTab/InformationTab';
 import ReviewTab from './ReviewTab/ReviewTab';
 import InquiryTab from './InquiryTab/InquiryTab';
 import ExchangeRefundTab from './ExchangeRefundTab/ExchangeRefundTab';
+
+import '@fortawesome/fontawesome-free/js/all.js';
 import './ProductDescription.scss';
 
 class ProductDescription extends Component {

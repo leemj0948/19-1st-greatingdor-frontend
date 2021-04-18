@@ -1,6 +1,28 @@
-[
-  {
-    "title": "MAL 알라 크림치즈",
-    "price": "5,400원"
-  }
-]
+{
+  "RESULT": [
+    {
+      "product_id": "1",
+      "option_id": 1,
+      "option_name": "옵션 1",
+      "option_price": 7050
+    },
+    {
+      "product_id": "1",
+      "option_id": 2,
+      "option_name": "옵션 2",
+      "option_price": 2250
+    },
+    {
+      "product_id": "1",
+      "option_id": 3,
+      "option_name": "옵션 3",
+      "option_price": 7125
+    },
+    {
+      "product_id": "1",
+      "option_id": 4,
+      "option_name": "옵션 4",
+      "option_price": 7650
+    }
+  ]
+}
