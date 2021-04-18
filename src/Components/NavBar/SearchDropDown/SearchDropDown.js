@@ -88,12 +88,12 @@ class SearchDropDown extends Component {
         <div className="search_items">
           <ul className="menu">
             {searchItemList &&
-              searchItemList.map((item, idx1) => {
+              searchItemList.map((item, idx) => {
                 return (
                   <li key={idx}>
                     <div className="title">{item.title}</div>
                     <div className="items_container">
-                      {item.category.map((category, idx2) => {
+                      {item.category.map((category, idx) => {
                         return (
                           <Button
                             isClicked={isClicked}

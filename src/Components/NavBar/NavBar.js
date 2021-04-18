@@ -16,12 +16,10 @@ class NavBar extends Component {
     this.setState({ navSearchInput: e.target.value });
   };
 
-  handleDropDown = e => {
-    if (e.target.innerHTML === '카테고리') {
-      this.setState({ categoryDropdown: !this.state.categoryDropdown });
-    } else if (e.target.innerHTML === '') {
-      this.setState({ searchDropdown: !this.state.searchDropdown });
-    }
+  handleDropDown = name => {
+    this.setState({
+      [name]: !this.state[name],
+    });
   };
 
   render() {
@@ -70,7 +68,7 @@ class NavBar extends Component {
             <div className="navbar_category_list">
               <button
                 className="navbar_category_burger"
-                onClick={this.handleDropDown}
+                onClick={() => this.handleDropDown('categoryDropdown')}
               >
                 <i className="fas fa-bars"></i>
                 <li>
@@ -80,7 +78,7 @@ class NavBar extends Component {
               {categoryDropdown && (
                 <CategoryDropDown
                   isClicked={isClicked}
-                  handleDropDown={this.handleDropDown}
+                  handleDropDown={() => this.handleDropDown('categoryDropdown')}
                 />
               )}
             </div>
@@ -101,7 +99,10 @@ class NavBar extends Component {
                 className="search_btn"
                 //검색 버튼 onclick시 input값이 있으면 바로 검색창으로 넘어가고 => 이부분 어떻게 처리?
                 //빈 값이면 드롭다운 열리게 처리
-                onClick={!navSearchInput && this.handleDropDown}
+                onClick={
+                  !navSearchInput &&
+                  (() => this.handleDropDown('searchDropdown'))
+                }
               >
                 <i className="fas fa-search"></i>
               </button>
@@ -110,7 +111,9 @@ class NavBar extends Component {
               </button>
             </div>
             {searchDropdown && (
-              <SearchDropDown handleDropDown={this.handleDropDown} />
+              <SearchDropDown
+                handleDropDown={() => this.handleDropDown('searchDropdown')}
+              />
             )}
           </ul>
         </div>
