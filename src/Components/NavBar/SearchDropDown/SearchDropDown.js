@@ -4,6 +4,7 @@ import './SearchDropDown.scss';
 
 class SearchDropDown extends Component {
   state = {
+    isClicked: false,
     searchInput: '',
     searchItemList: [],
   };
@@ -49,11 +50,18 @@ class SearchDropDown extends Component {
     this.handleItemSearch();
   };
 
-  // 드롭다운 선택 아이템 초기화
-  clearSelectedBtn = () => {};
+  // 검색창 드롭다운 아이템 선택
+  handleItemClick = () => {
+    this.setState({ isClicked: !this.state.isClicked });
+  };
+
+  // 검색창 드롭다운 아이템 선택 초기화
+  clearSelectedBtn = () => {
+    this.setState({ isClicked: false });
+  };
 
   render() {
-    const { searchItemList } = this.state;
+    const { isClicked, searchItemList } = this.state;
 
     return (
       <div className="search_dropdown">
@@ -80,13 +88,20 @@ class SearchDropDown extends Component {
         <div className="search_items">
           <ul className="menu">
             {searchItemList &&
-              searchItemList.map((item, idx) => {
+              searchItemList.map((item, idx1) => {
                 return (
                   <li key={idx}>
                     <div className="title">{item.title}</div>
                     <div className="items_container">
-                      {item.category.map((category, idx) => {
-                        return <Button category={category} key={idx} />;
+                      {item.category.map((category, idx2) => {
+                        return (
+                          <Button
+                            isClicked={isClicked}
+                            handleItemClick={this.handleItemClick}
+                            category={category}
+                            key={idx}
+                          />
+                        );
                       })}
                     </div>
                   </li>

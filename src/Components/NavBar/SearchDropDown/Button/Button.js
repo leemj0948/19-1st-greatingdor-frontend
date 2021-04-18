@@ -2,20 +2,14 @@ import React, { Component } from 'react';
 import './Button.scss';
 
 class Button extends Component {
-  state = {
-    isClicked: false,
+  onClickHandler = () => {
+    this.props.handleItemClick();
   };
-
-  handleItemClick = () => {
-    this.setState({ isClicked: !this.state.isClicked });
-  };
-
   render() {
-    const { category, idx } = this.props;
-    const { isClicked } = this.state;
+    const { isClicked, category, idx } = this.props;
     return (
       <button
-        onClick={this.handleItemClick}
+        onClick={this.onClickHandler}
         className={isClicked ? 'button_items selected' : 'button_items'}
         key={idx}
       >
