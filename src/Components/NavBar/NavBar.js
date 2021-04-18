@@ -8,9 +8,8 @@ class NavBar extends Component {
   state = {
     navSearchInput: '',
     isClicked: false,
-    CategoryDropdown: false,
-    CustomerDropdown: false,
-    SearchDropdown: false,
+    categoryDropdown: false,
+    searchDropdown: false,
   };
 
   handleInputContent = e => {
@@ -18,15 +17,11 @@ class NavBar extends Component {
   };
 
   handleCategoryDropDown = () => {
-    this.setState({ CategoryDropdown: !this.state.CategoryDropdown });
-  };
-
-  handleCustomerDropDown = () => {
-    this.setState({ CustomerDropdown: !this.state.CustomerDropdown });
+    this.setState({ categoryDropdown: !this.state.categoryDropdown });
   };
 
   handleSearchDropdown = () => {
-    this.setState({ SearchDropdown: !this.state.SearchDropdown });
+    this.setState({ searchDropdown: !this.state.searchDropdown });
   };
 
   render() {
@@ -41,9 +36,8 @@ class NavBar extends Component {
     const {
       navSearchInput,
       isClicked,
-      CategoryDropdown,
-      CustomerDropdown,
-      SearchDropdown,
+      categoryDropdown,
+      searchDropdown,
     } = this.state;
 
     return (
@@ -59,7 +53,7 @@ class NavBar extends Component {
             <span>
               <Link to="#">쿠폰등록 </Link>
             </span>
-            <span onClick={this.handleCustomerDropDown}>
+            <span>
               <Link to="#">
                 고객센터
                 <button className="customer_center_Btn">
@@ -67,10 +61,9 @@ class NavBar extends Component {
                 </button>
               </Link>
             </span>
-            {CustomerDropdown && <CustomerDropdown />}
           </div>
           <div className="navbar_logo">
-            <img src="/img/img_header_logo_Greating.png"></img>
+            <img src="/img/img_header_logo_Greating.png" alt="main logo" />
           </div>
           <ul className="navbar_categories">
             {/* dropdown 1 - category부문*/}
@@ -84,7 +77,7 @@ class NavBar extends Component {
                   <a>카테고리</a>
                 </li>
               </button>
-              {CategoryDropdown && (
+              {categoryDropdown && (
                 <CategoryDropDown
                   isClicked={isClicked}
                   handleDropDown={this.handleCategoryDropDown}
@@ -118,7 +111,7 @@ class NavBar extends Component {
               </button>
             </div>
           </ul>
-          {SearchDropdown && (
+          {searchDropdown && (
             <SearchDropDown handleDropDown={this.handleSearchDropdown} />
           )}
         </div>
