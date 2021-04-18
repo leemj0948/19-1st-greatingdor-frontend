@@ -105,7 +105,6 @@ class NavBar extends Component {
               >
                 <i className="fas fa-search"></i>
               </button>
-
               <button className="cart_btn">
                 <i className="fas fa-cart-arrow-down"></i>
               </button>

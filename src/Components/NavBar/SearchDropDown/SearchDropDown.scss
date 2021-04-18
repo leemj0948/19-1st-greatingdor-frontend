@@ -7,6 +7,8 @@
   top: 80px;
   background-color: $PrimaryWhite;
   border: 1px solid $PrimaryGreen;
+  z-index: 9999;
+
   .search_input {
     .first_container {
       display: flex;
