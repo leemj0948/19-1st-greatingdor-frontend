@@ -22,8 +22,11 @@
         color: black;
       }
     }
+
     .family_site {
       padding: 5px;
+      cursor: pointer;
+
       &:focus {
         outline: none;
       }
@@ -33,8 +36,8 @@
   .footer_contents {
     display: flex;
     justify-content: space-between;
+
     .customer_center {
-      margin-right: 10px;
       .customer_center_title {
         font-weight: bold;
       }
@@ -49,11 +52,13 @@
         margin-bottom: 10px;
         font-size: 13px;
       }
+
       .social_media {
-        padding-top: 5px;
-        font-size: 45px;
         display: flex;
         justify-content: flex-start;
+        padding-top: 5px;
+        font-size: 45px;
+
         a {
           text-decoration: none;
           color: black;
@@ -63,6 +68,7 @@
         }
       }
     }
+
     .company_info {
       .company_name {
         font-weight: bold;
