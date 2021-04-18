@@ -46,40 +46,39 @@ class CartModal extends Component {
             </button>
           </div>
           <div className="wrapper">
-            <div className="contents_container">
-              <span className="item_name">{cartData.title}</span>
-              <div className="right">
-                <span className="amount">수량</span>
-                <span className="cal_amount">
-                  <button className="minus_btn" onClick={this.substractAmount}>
-                    -
-                  </button>
-                  <input
-                    className="amount_status"
-                    value={this.state.amountCount}
-                    onChange={this.handleAmountInput}
-                  />
-                  <button className="plus_btn" onClick={this.addAmount}>
-                    +
-                  </button>
-                </span>
-                <span className="price">
-                  {(
-                    cartData.price *
-                    (1 - cartData.discount_rate)
-                  ).toLocaleString()}
-                  원
-                </span>
-              </div>
-            </div>
+            {cartData.map((cartItem, idx) => {
+              return (
+                <div className="contents_container" key={idx}>
+                  <span className="item_name">{cartItem.option_name}</span>
+                  <div className="right">
+                    <span className="amount">수량</span>
+                    <span className="cal_amount">
+                      <button
+                        className="minus_btn"
+                        onClick={this.substractAmount}
+                      >
+                        -
+                      </button>
+                      <input
+                        className="amount_status"
+                        value={this.state.amountCount}
+                        onChange={this.handleAmountInput}
+                      />
+                      <button className="plus_btn" onClick={this.addAmount}>
+                        +
+                      </button>
+                    </span>
+                    <span className="price">
+                      {cartItem.option_price.toLocaleString()} 원
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
           </div>
           <div className="total_price">
-            총 금액:{' '}
-            {(
-              amountCount *
-              (cartData.price * (1 - cartData.discount_rate).toLocaleString())
-            ).toLocaleString()}
-            원
+            {/* 모든 옵션의 가격*수량 더한 금액으로 구현 */}총 금액:{' '}
+            {amountCount.toLocaleString()}원
           </div>
 
           <div className="buttons_container">
