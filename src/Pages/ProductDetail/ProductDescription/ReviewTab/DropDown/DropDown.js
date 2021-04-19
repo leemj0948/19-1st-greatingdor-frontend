@@ -7,8 +7,8 @@ class DropDown extends Component {
 
     return (
       <div className="dropdown">
-        <div className="option">{item.option}</div>
-        <p className="contents">{item.contents}</p>
+        <div className="option">{item.option_name}</div>
+        <p className="contents">{item.content}</p>
       </div>
     );
   }

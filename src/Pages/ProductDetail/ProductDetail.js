@@ -4,20 +4,24 @@ import Location from './Location/Location';
 import ImageSlider from './ProductInfo/ImageSlider/ImageSlider';
 import ProductInfo from './ProductInfo/ProductInfo';
 import ProductDescription from '../ProductDetail/ProductDescription/ProductDescription';
-
 import './ProductDetail.scss';
 
 export class ProductDetail extends Component {
   state = {
     productItem: [],
   };
+
   componentDidMount = () => {
-    fetch('/data/productData.json')
+    const id = this.props.match.params.id;
+    fetch(`http://10.58.7.140:8000/products/${id}`)
       .then(res => res.json())
       .then(data => {
-        this.setState({ productItem: data.RESULT });
+        this.setState({
+          productItem: data.RESULT,
+        });
       });
   };
+
   render() {
     return (
       <div className="product_detail">

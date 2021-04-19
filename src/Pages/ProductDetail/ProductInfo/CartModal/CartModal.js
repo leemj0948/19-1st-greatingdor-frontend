@@ -30,7 +30,6 @@ class CartModal extends Component {
   };
   render() {
     const { cartData } = this.props;
-    console.log(cartData);
     return (
       <div className="cart_modal">
         <div className="modal_container">

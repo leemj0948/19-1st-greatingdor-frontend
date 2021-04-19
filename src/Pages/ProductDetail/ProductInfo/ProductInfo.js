@@ -10,7 +10,7 @@ class ProductInfo extends Component {
 
   showCartModal = () => {
     this.onOffCartModal();
-    fetch('/data/cartData.json')
+    fetch(`http://10.58.7.140:8000/products/${this.props.item.id}/options`)
       .then(response => response.json())
       .then(data => {
         this.setState({
@@ -21,10 +21,6 @@ class ProductInfo extends Component {
         });
       });
   };
-
-  // closeCartModal = () => {
-  //   this.setState({ isCartModalOn: false });
-  // };
 
   onOffCartModal = () => {
     this.setState({ isCartModalOn: !this.state.isCartModalOn });
@@ -44,6 +40,7 @@ class ProductInfo extends Component {
   render() {
     const { item } = this.props;
     const { cartData, isCartModalOn } = this.state;
+
     return (
       <div className="product_info">
         <div className="product_info_header">
@@ -72,26 +69,22 @@ class ProductInfo extends Component {
           <span>용량</span>
           <span>{item.capacity} g</span>
         </div>
-        <div className="product_calorie">
+        {/* <div className="product_calorie">
           <span>칼로리</span>
           <span>{item.kcal} kcal</span>
-        </div>
-        {/* 나중에 백에서 추가 데이터 받을 예정 */}
-        {/* <div className="product_origin">밀가루(밀:미국,캐나다산)</div> */}
+        </div> */}
         <div className="product_price">
-          {item.discount_rate !== '0' ? (
+          {item.price !== item.discount_price ? (
             <>
               <span className="discount_price">
-                {(item.price * (1 - item.discount_rate)).toLocaleString()}원
+                {item.discount_price.toLocaleString()}원
               </span>
               <span className="original_price">
-                {(item.price * 1).toLocaleString()}원
+                {item.price.toLocaleString()}원
               </span>
             </>
           ) : (
-            <span className="discount_price">
-              {(item.price * (1 - item.discount_rate)).toLocaleString()}원
-            </span>
+            <span className="discount_price">{item.discount_price}원</span>
           )}
         </div>
         <div className="product_delivery">

@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
+import './InformationTab.scss';
 
-class Information extends Component {
+class InformationTab extends Component {
+  constructor(props) {
+    super(props);
+  }
   state = {
     imageData: [],
   };
-  // componentDidMount = () => {
-  //   fetch('http://10.58.2.110:8000/details/under/1')
-  //     .then(response => response.json())
-  //     .then(data => this.setState({ imageData: data.RESULT }));
-  // };
+  componentDidMount = () => {
+    fetch(`http://10.58.7.140:8000/products/${this.props.item.id}`)
+      .then(response => response.json())
+      .then(data => this.setState({ imageData: data.RESULT }));
+  };
   render() {
-    const { imageData } = this.state;
-    console.log(imageData);
     return (
       <div>
-        <img src={imageData}></img>
+        <img src={this.state.imageData.content} />
       </div>
     );
   }
 }
 
-export default Information;
+export default InformationTab;

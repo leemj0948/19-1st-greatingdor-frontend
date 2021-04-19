@@ -9,10 +9,10 @@ class ReviewTab extends Component {
   };
 
   componentDidMount = () => {
-    fetch('/data/reviewTab.json')
+    fetch(`http://10.58.7.140:8000/products/${this.props.item.id}/reviews`)
       .then(response => response.json())
       .then(data => {
-        this.setState({ reviewData: data });
+        this.setState({ reviewData: data.RESULT });
       });
   };
 
@@ -26,6 +26,7 @@ class ReviewTab extends Component {
 
   render() {
     const { reviewData, reviewId } = this.state;
+
     return (
       <>
         <div className="review_header">
@@ -52,8 +53,8 @@ class ReviewTab extends Component {
                         </button>
                       </span>
                     </div>
-                    <span className="user_id">{review.userId}</span>
-                    <span className="date">{review.date}</span>
+                    <span className="user_id">{review.author}</span>
+                    <span className="date">{review.created_at}</span>
                   </div>
                   {reviewId === idx + 1 && <DropDown item={review} />}
                 </div>

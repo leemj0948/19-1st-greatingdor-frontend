@@ -17,6 +17,13 @@ class ProductDescription extends Component {
   };
 
   render() {
+    const TAB_OBJ = {
+      1: <InformatonTab item={this.props.item} />,
+      2: <ReviewTab item={this.props.item} />,
+      3: <InquiryTab />,
+      4: <ExchangeRefundTab item={this.props.item} />,
+    };
+
     return (
       <div className="tab_container">
         <ul className="tabs">
@@ -39,12 +46,5 @@ class ProductDescription extends Component {
 }
 
 export default ProductDescription;
-
-const TAB_OBJ = {
-  1: <InformatonTab />,
-  2: <ReviewTab />,
-  3: <InquiryTab />,
-  4: <ExchangeRefundTab />,
-};
 
 const CATEGORY_ARR = ['상품정보', '상품후기', '상품문의', '교환/반품'];
