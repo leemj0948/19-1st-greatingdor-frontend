@@ -1,0 +1,11 @@
+@import '../../../../../Styles/common.scss';
+
+.dropdown {
+  padding: 10px;
+  background-color: $PrimaryGrey;
+  .option {
+    color: $PrimaryGreen;
+    font-weight: bold;
+    padding: 5px 0;
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "RESULT": {
+    "id": 1,
+    "title": "목살스테이크 샐러드",
+    "description": "어제까지 친구들과 노닐던 돼지를 잡아 만든",
+    "price": 60000,
+    "category_name": "샐러드",
+    "menu_name": "건강마켓",
+    "discount_rate": "0.250",
+    "discount_price": 45000,
+    "capacity": 255,
+    "content": "https://github.com/hiyee-gj/imagefile/blob/master/detail1.jpg?raw=true",
+    "images": [
+      "https://github.com/hiyee-gj/imagefile/blob/master/%EC%86%8C%EA%B3%A0%EA%B8%B0%EC%83%90%EB%9F%AC%EB%93%9C.jpg?raw=true"
+    ],
+    "tags": ["돼지고기", "샐러드", "스테이크"]
+  }
+}
