@@ -84,7 +84,9 @@ class SearchDropDown extends Component {
   clearSelectedBtn = () => {
     this.setState({ isSelected: false });
   };
-  goToResultPage = () => {};
+  goToResultPage = () => {
+    //fetch('');
+  };
 
   render() {
     const { isClicked, searchItemList } = this.state;
