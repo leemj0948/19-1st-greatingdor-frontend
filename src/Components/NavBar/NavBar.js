@@ -43,10 +43,10 @@ class NavBar extends Component {
         <div className="navbar_inner_container">
           <div className="navbar_user_area">
             <span>
-              <Link to="#"> 로그인 </Link>
+              <Link to="/login"> 로그인 </Link>
             </span>
             <span>
-              <Link to="#">회원가입</Link>
+              <Link to="/sign-up">회원가입</Link>
             </span>
             <span>
               <Link to="#">쿠폰등록 </Link>
