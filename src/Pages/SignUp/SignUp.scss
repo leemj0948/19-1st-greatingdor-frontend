@@ -1,0 +1,136 @@
+@import '../../Styles/common.scss';
+@import '../../Styles/reset.scss';
+.signUp {
+  .signUpTitle {
+    display: flex;
+    width: 70vw;
+    height: 30vh;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .signUpTitleWords {
+      padding: 1rem;
+      font-size: 20px;
+      font-weight: 900;
+    }
+    .signUpGreetingWords {
+      font-size: 5px;
+      font-weight: 600;
+    }
+    .signUpGreetingDetails {
+      font-size: 4px;
+      margin-top: 1rem;
+      text-align: center;
+    }
+  }
+  .signUpMember {
+    display: flex;
+    width: 90vw;
+    height: 50vh;
+    margin: 0 auto;
+    justify-content: space-between;
+    .integratedMember {
+      position: relative;
+      display: flex;
+      width: 49%;
+      border-top: 2px solid black;
+      box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);
+      flex-direction: column;
+      text-align: center;
+      b {
+        font-weight: 900;
+        top: 30px;
+        @extend .middlePosition;
+        font-size: 12px;
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          background-color: $PrimaryYellow;
+          top: 12px;
+          left: 0;
+        }
+      }
+      img {
+        width: 100px;
+        height: 40px;
+        @extend .middlePosition;
+        top: 4rem;
+      }
+      ul {
+        font-size: 10px;
+        @extend .middlePosition;
+        top: 9rem;
+        li {
+          margin-top: 2rem;
+          font-weight: 900;
+          font-size: 0.8rem;
+        }
+      }
+      button {
+        background-color: $PrimaryGreen;
+        color: #fff;
+        padding: 0.5rem 2rem;
+        border: none;
+        bottom: 2rem;
+        @extend .middlePosition;
+      }
+    }
+    .generalMember {
+      position: relative;
+      display: flex;
+      width: 49%;
+      border-top: 2px solid black;
+      flex-direction: column;
+      text-align: center;
+      box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);
+      b {
+        font-weight: 900;
+        top: 30px;
+        @extend .middlePosition;
+        font-size: 12px;
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          background-color: $PrimaryYellow;
+          top: 12px;
+          left: 0;
+        }
+      }
+      img {
+        width: 120px;
+        height: 30px;
+        @extend .middlePosition;
+        top: 4rem;
+      }
+      p {
+        @extend .middlePosition;
+        top: 7rem;
+        font-weight: 900;
+        font-size: 0.8rem;
+        margin-top: 2rem;
+      }
+      button {
+        background-color: $PrimaryGreen;
+        color: #fff;
+        padding: 0.5rem 2rem;
+        border: none;
+        bottom: 2rem;
+        @extend .middlePosition;
+      }
+    }
+  }
+  .signUpSns {
+    width: 70vw;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 0;
+    p {
+      padding: 10px;
+    }
+  }
+}

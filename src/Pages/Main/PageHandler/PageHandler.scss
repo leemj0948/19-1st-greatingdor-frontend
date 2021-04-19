@@ -1,0 +1,23 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+@import '../../../Styles/common.scss';
+
+.pageNum {
+  @extend %pageHandlerStyle;
+  &.selected {
+    background-color: $PrimaryGreen;
+  }
+}
+
+.lfArrow,
+.rtArrow {
+  @extend %pageHandlerStyle;
+}
+
+%pageHandlerStyle {
+  @extend %flex-center;
+  margin-left: 3px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
