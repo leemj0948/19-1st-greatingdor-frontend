@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './CartModal.scss';
 
 class CartModal extends Component {
+  // 모달창 수량 삭감
   substractAmount = (val, idx) => {
     val = Number(val);
     if (val === 0) {
@@ -10,18 +11,19 @@ class CartModal extends Component {
     this.props.changeCount(val - 1, idx);
   };
 
+  // 모달창 수량 증가
   addAmount = (val, idx) => {
     val = Number(val);
     this.props.changeCount(val + 1, idx);
   };
 
-  goToCart = () => {
-    if (this.state.amountCount === 0) {
-      alert('제품의 수량을 입력해주세요. ');
-    } else {
-      // 장바구니, 구매하기 페이지로 이동하기
-    }
-  };
+  // goToCart = () => {
+  //   if (this.state.amountCount === 0) {
+  //     alert('제품의 수량을 입력해주세요. ');
+  //   } else {
+  //     // 장바구니, 구매하기 페이지로 이동하기
+  //   }
+  // };
 
   onClickHandler = () => {
     this.props.onOffCartModal();

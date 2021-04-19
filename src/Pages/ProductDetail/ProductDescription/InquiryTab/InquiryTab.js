@@ -55,7 +55,9 @@ class InquiryTab extends Component {
                         className="icon"
                         onClick={() => this.handleDropdown(idx + 1)}
                       >
-                        <i className="fas fa-chevron-down"></i>
+                        <button>
+                          <i className="fas fa-chevron-down"></i>
+                        </button>
                       </span>
                     </div>
                   </div>
