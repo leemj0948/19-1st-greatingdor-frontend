@@ -14,7 +14,17 @@ class SearchDropDown extends Component {
     fetch('/data/SearchItems.json')
       .then(response => response.json())
       .then(data => {
-        this.setState({ searchItemList: data.RESULT });
+        console.log(data);
+        const newArr = data.RESULT.map(el => {
+          return {
+            ...el,
+            category: el.category.map(el2 => {
+              return { name: el2, isSelected: false };
+            }),
+          };
+        });
+        console.log(newArr);
+        this.setState({ searchItemList: newArr });
       });
   };
 
@@ -52,6 +62,7 @@ class SearchDropDown extends Component {
 
   // 검색창 드롭다운 아이템 선택
   handleItemClick = (num1, num2) => {
+    console.log(num1, num2);
     const { searchItemList } = this.state;
     const newData = searchItemList.map((item, idx) => {
       return num1 !== idx
@@ -61,7 +72,7 @@ class SearchDropDown extends Component {
             category: item.category.map((item2, idx2) => {
               return num2 !== idx2
                 ? item2
-                : { ...item2, isClicked: !item2.isClicked };
+                : { ...item2, isSelected: !item2.isSelected };
             }),
           };
     });
@@ -71,8 +82,9 @@ class SearchDropDown extends Component {
 
   // 검색창 드롭다운 아이템 선택 초기화
   clearSelectedBtn = () => {
-    this.setState({ isClicked: false });
+    this.setState({ isSelected: false });
   };
+  goToResultPage = () => {};
 
   render() {
     const { isClicked, searchItemList } = this.state;
@@ -102,18 +114,20 @@ class SearchDropDown extends Component {
         <div className="search_items">
           <ul className="menu">
             {searchItemList &&
-              searchItemList.map((item, idx) => {
+              searchItemList.map((item, idx1) => {
                 return (
-                  <li key={idx}>
+                  <li key={idx1}>
                     <div className="title">{item.title}</div>
                     <div className="items_container">
-                      {item.category.map((category, idx) => {
+                      {item.category.map((category, idx2) => {
                         return (
                           <Button
-                            isClicked={isClicked}
+                            isClicked={category.isSelected}
                             handleItemClick={this.handleItemClick}
-                            category={category}
-                            key={idx}
+                            category={category.name}
+                            key={idx2}
+                            number1={idx1}
+                            number2={idx2}
                           />
                         );
                       })}
@@ -127,7 +141,9 @@ class SearchDropDown extends Component {
           <button className="clear_btn" onClick={this.clearSelectedBtn}>
             초기화
           </button>
-          <button className="search_btn">선택완료</button>
+          <button className="search_btn" onClick={this.goToResultPage}>
+            선택완료
+          </button>
         </div>
       </div>
     );
