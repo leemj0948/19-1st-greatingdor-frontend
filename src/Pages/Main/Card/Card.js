@@ -3,12 +3,17 @@ import './Card.scss';
 
 class Card extends Component {
   render() {
-    const { img, sub, title, price, category, isNew } = this.props;
+    const { img, sub, title, price, category, isNew, store } = this.props;
     return (
       <li className="img">
         <div className="imgFrame">
           <img src={img} alt="제품이미지 " />
-          {isNew ? <span className="new">{isNew}New</span> : null}
+          {isNew && <span className="new">{isNew}New</span>}
+          {store === '냉장' ? (
+            <span className="fresh">{store}</span>
+          ) : store === '냉동' ? (
+            <span className="frozen">{store}</span>
+          ) : null}
         </div>
 
         <li className="sub">{sub}</li>

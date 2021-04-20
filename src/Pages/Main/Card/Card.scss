@@ -1,7 +1,22 @@
 @import '../../../Styles/common.scss';
 
+%storeTagStyle {
+  position: absolute;
+  left: 5px;
+  bottom: 10px;
+  height: 20px;
+  width: 50px;
+  border: solid 1px;
+  background: rgba(255, 255, 255, 0.6);
+  box-sizing: border-box;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 13px;
+}
+
 .cards {
-  @extend %flex-center;
+  display: flex;
+  align-items: center;
   flex-wrap: wrap;
   margin: 0px auto;
   width: 1100px;
@@ -28,6 +43,18 @@
         font-size: 30px;
         font-weight: 800;
         text-align: center;
+      }
+      .fresh {
+        @extend %flex-center;
+        @extend %storeTagStyle;
+        border-color: rgb(250, 79, 145);
+        color: rgb(250, 79, 145);
+      }
+      .frozen {
+        @extend %flex-center;
+        @extend %storeTagStyle;
+        border-color: rgb(38, 79, 145);
+        color: rgb(38, 79, 145);
       }
     }
     img {

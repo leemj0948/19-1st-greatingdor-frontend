@@ -15,7 +15,8 @@ class PageHandler extends Component {
   // };
 
   render() {
-    const { elm, isSelected, handleClick, elementIndex } = this.props;
+    const { elm, isSelected, handleClick, elementIndex, num } = this.props;
+    console.log(isSelected);
     return (
       <>
         <li

@@ -1,71 +1,79 @@
 [
   {
     "category": "샐러드",
-    "image_url": "https://image.greating.co.kr/IL/item/202007/23/M_C4CD3D28A993480A9F2C3873A18414AB.jpg",
+    "image": "https://image.greating.co.kr/IL/item/202007/23/M_C4CD3D28A993480A9F2C3873A18414AB.jpg",
     "description": "Welcome to world best coding bootcamp!",
     "title": "목살스테이크 샐러드",
     "price": "500000",
-    "isNew": true
+    "isnew": true,
+    "store": "냉장"
   },
   {
     "category": "샐러드",
-    "image_url": "https://image.greating.co.kr/IL/item/202007/23/M_C4CD3D28A993480A9F2C3873A18414AB.jpg",
+    "image": "https://image.greating.co.kr/IL/item/202007/23/M_C4CD3D28A993480A9F2C3873A18414AB.jpg",
     "description": "Welcome to world best coding bootcamp!",
     "title": "목살스테이크 샐러드",
     "price": "500000",
-    "isNew": false
+    "isnew": false,
+    "store": "냉동"
   },
   {
     "category": "샐러드",
-    "image_url": "https://image.greating.co.kr/IL/item/202007/23/M_C4CD3D28A993480A9F2C3873A18414AB.jpg",
+    "image": "https://image.greating.co.kr/IL/item/202007/23/M_C4CD3D28A993480A9F2C3873A18414AB.jpg",
     "description": "Welcome to world best coding bootcamp!",
     "title": "목살스테이크 샐러드",
     "price": "500000",
-    "isNew": true
+    "isNew": true,
+    "store": ""
   },
   {
     "category": "샐러드",
-    "image_url": "https://image.greating.co.kr/IL/item/202007/23/M_C4CD3D28A993480A9F2C3873A18414AB.jpg",
+    "image": "https://image.greating.co.kr/IL/item/202007/23/M_C4CD3D28A993480A9F2C3873A18414AB.jpg",
     "description": "Welcome to world best coding bootcamp!",
     "title": "목살스테이크 샐러드",
     "price": "500000",
-    "isNew": false
+    "isNew": false,
+    "store": "냉장"
   },
   {
     "category": "샐러드",
-    "image_url": "https://image.greating.co.kr/IL/item/202007/23/M_C4CD3D28A993480A9F2C3873A18414AB.jpg",
+    "image": "https://image.greating.co.kr/IL/item/202007/23/M_C4CD3D28A993480A9F2C3873A18414AB.jpg",
     "description": "Welcome to world best coding bootcamp!",
     "title": "목살스테이크 샐러드",
     "price": "500000",
-    "isNew": true
+    "isNew": true,
+    "store": "냉장"
   },
   {
     "category": "샐러드",
-    "image_url": "https://image.greating.co.kr/IL/item/202007/23/M_C4CD3D28A993480A9F2C3873A18414AB.jpg",
+    "image": "https://image.greating.co.kr/IL/item/202007/23/M_C4CD3D28A993480A9F2C3873A18414AB.jpg",
     "description": "Welcome to world best coding bootcamp!",
     "title": "목살스테이크 샐러드",
     "price": "500000",
-    "isNew": true
+    "isNew": true,
+    "store": "냉장"
   },
   {
     "category": "샐러드",
-    "image_url": "https://image.greating.co.kr/IL/item/202007/23/M_C4CD3D28A993480A9F2C3873A18414AB.jpg",
+    "image": "https://image.greating.co.kr/IL/item/202007/23/M_C4CD3D28A993480A9F2C3873A18414AB.jpg",
     "description": "Welcome to world best coding bootcamp!",
     "title": "목살스테이크 샐러드",
     "price": "500000",
-    "isNew": true
+    "isNew": true,
+    "store": "냉장"
   },
   {
     "category": "샐러드",
-    "image_url": "https://image.greating.co.kr/IL/item/202007/23/M_C4CD3D28A993480A9F2C3873A18414AB.jpg",
+    "image": "https://image.greating.co.kr/IL/item/202007/23/M_C4CD3D28A993480A9F2C3873A18414AB.jpg",
     "description": "Welcome to world best coding bootcamp!",
     "title": "목살스테이크 샐러드",
     "price": "500000",
-    "isNew": true
+    "isNew": true,
+    "store": "냉장"
   },
   {
     "category": "샐러드",
-    "image_url": "https://image.greating.co.kr/IL/item/202007/23/M_C4CD3D28A993480A9F2C3873A18414AB.jpg",
+    "image": "https://image.greating.co.kr/IL/item/202007/23/M_C4CD3D28A993480A9F2C3873A18414AB.jpg",
     "description": "Welcome to world best coding bootcamp!",
     "title": "목살스테이크 샐러드",
     "price": "500000",
@@ -73,10 +81,11 @@
   },
   {
     "category": "건강음료",
-    "image_url": "https://image.greating.co.kr/IL/item/202006/26/M_397FFB6253FA4149B9DACC58B8CD041A.png",
+    "image": "https://image.greating.co.kr/IL/item/202006/26/M_397FFB6253FA4149B9DACC58B8CD041A.png",
     "description": "나는 건강음료",
     "title": "나는 건강음료",
     "price": "5000000",
-    "isNew": true
+    "isNew": true,
+    "store": "냉장"
   }
 ]

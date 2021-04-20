@@ -1,0 +1,44 @@
+@import '../../../Styles/common.scss';
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px auto;
+  width: 1035px;
+  font-size: 16px;
+  .optional {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 430px;
+    .fa-check-circle {
+      margin: 5px;
+      font-size: 20px;
+    }
+  }
+  .cardNum {
+    margin-top: 18px;
+    width: 120px;
+  }
+  .checkList {
+    width: 172px;
+    height: 42px;
+    select {
+      padding: 5px;
+      width: 100%;
+      height: 100%;
+      font-size: 16px;
+    }
+  }
+  .checkListBtn {
+    @extend %flex-center;
+    margin-left: 10px;
+    width: 108px;
+    height: 42px;
+    border: 5px solid #918c00;
+    box-sizing: border-box;
+    background-color: #918c00;
+    color: white;
+    cursor: pointer;
+  }
+}
