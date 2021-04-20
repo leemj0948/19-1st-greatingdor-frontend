@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React, { Component } from 'react';
 import './SignUpDetail.scss';
 class SignUpDetail extends Component {

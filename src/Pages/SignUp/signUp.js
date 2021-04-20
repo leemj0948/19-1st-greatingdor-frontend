@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React, { Component } from 'react';
 import './SignUp.scss';
 import SnsWrap from '../../Components/SnsWrap/SnsWrap';

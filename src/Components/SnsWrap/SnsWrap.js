@@ -1,15 +1,15 @@
 /* eslint-disable prettier/prettier */
 import React, { Component } from 'react';
-import Naver from '../../Img/icon-naver.png';
-import Kakao from '../../Img/icon-kakao.png';
-import Google from '../../Img/icon-google.png';
+// import Naver from '../../Img/icon-naver.png';
+// import Kakao from '../../Img/icon-kakao.png';
+// import Google from '../../Img/icon-google.png';
 import '../SnsWrap/SnsWrap.scss';
 
 class SnsWrap extends Component {
   render() {
     return (
       <div className="snsWrap">
-        <div>
+        {/* <div>
           <img src={Naver} alt="#" />
           <p>{this.props.naver}</p>
         </div>
@@ -20,7 +20,7 @@ class SnsWrap extends Component {
         <div>
           <img src={Google} alt="#" />
           <p>{this.props.google}</p>
-        </div>
+        </div> */}
       </div>
     );
   }
