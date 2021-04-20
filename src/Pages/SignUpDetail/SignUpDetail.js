@@ -15,19 +15,14 @@ class SignUpDetail extends Component {
       date_birth: '',
     };
   }
-
   handleSignUpInput = e => {
     const { name, value } = e.target; // const name = e.target.name
     this.setState({
       [name]: value,
     });
-    console.log(e.target.value);
   };
-
   goToLogin = e => {
     e.preventDefault();
-    console.log('패치함수');
-    console.log(this.state);
     fetch('http://10.58.7.158:8000/members/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -46,7 +41,7 @@ class SignUpDetail extends Component {
       .then(response => response.json())
       .then(result => {
         alert('success');
-        console.log(result);
+        this.props.history.push('/login');
       });
   };
   render() {
