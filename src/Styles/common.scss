@@ -1,7 +1,12 @@
-$PrimaryGreen:rgb(127,124,20);
-$PrimaryLightGreen:rgb(226,226,199);
-$PrimaryWhite:rgb(255,255,255);
-$PrimaryYellow:rgb(222,172,49);
-$PrimaryBlack:rgb(19,19,19);
-$PrimaryGrey:rgb(242,242,242);
+$PrimaryGreen: rgb(127, 124, 20);
+$PrimaryLightGreen: rgb(226, 226, 199);
+$PrimaryWhite: rgb(255, 255, 255);
+$PrimaryYellow: rgb(222, 172, 49);
+$PrimaryBlack: rgb(19, 19, 19);
+$PrimaryGrey: rgb(242, 242, 242);
 
+.middlePosition {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

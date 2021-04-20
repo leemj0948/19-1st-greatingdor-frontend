@@ -1,69 +1,44 @@
 import React, { Component } from 'react';
 import '../Login/Login.scss';
-import Naver from '../../Img/icon-naver.png';
-import Kakao from '../../Img/icon-kakao.png';
-import Google from '../../Img/icon-google.png';
+import SnsWrap from '../../Components/SnsWrap/SnsWrap';
 
 class Login extends Component {
   constructor() {
     super();
     this.state = {
-      // name: '',
       id: '',
       pw: '',
-      // email: '',
-      // date_birth: '',
-      // phone_number: '',
-      // borderBottom: '',
-      // borderAll: '',
+      click: 'false',
     };
   }
-  handleInput = e => {
+  BorderPoint = () => {
+    this.setState({
+      click: !this.state.click,
+    });
+  };
+  handleLoginInput = e => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
-    console.log(e.target.value);
   };
-
   goToMain = e => {
     e.preventDefault();
-    fetch('http://10.58.58.131:8000/members/signin', {
+    fetch('http://10.58.7.158:8000/members/signin', {
       method: 'POST',
       body: JSON.stringify({
         account: this.state.id,
         password: this.state.pw,
-        // email: this.state.email,
-        // name: 'seri park',
-        // date_birth: '19941022',
-        // phone_number: '01032441082',
       }),
     })
       .then(response => response.json())
-      .then(result => {
-        console.log(result);
-        // if (result.MESSAGE === 'SUCCESS') {
-        //   alert('성공');
-        //   // 메인페이지로 이동
-        // } else {
-        //   alert('fail'); //에러메세지
-        // }
+      .then(res => {
+        if (res.Token) {
+          localStorage.setItem('Token', res.Token);
+          this.props.history.push('/main');
+        }
       });
   };
-  // leftBorderPoint = () => {
-  //   this.setState({
-  //    borderAll:'borderPoint'
-  //   });
-  // };
-  // rightBorderPoint = () => {
-  //   this.setState({
-  //     borderAll:'borderPoint'
-  //   });
-  // };
-  // bottomLine=()=>{
-  //   this.setState({
-  //   bottomBottom:'bottomPoint'
-  //   });
-  // }
   render() {
+    console.log(this.state.click);
     return (
       <div className="login">
         <section className="loginTitle">
@@ -72,25 +47,37 @@ class Login extends Component {
         </section>
         <section className="loginForm">
           <div className="memberWrap">
-            <div>H.point 회원</div>
-            <div>greating 회원</div>
+            <div
+              onClick={this.BorderPoint}
+              className={
+                this.state.click ? 'borderPoint noBottom' : 'bottomPoint'
+              }
+            >
+              H.point 회원
+            </div>
+            <div
+              onClick={this.BorderPoint}
+              className={
+                this.state.click ? 'bottomPoint' : 'borderPoint noBottom'
+              }
+            >
+              greating 회원
+            </div>
           </div>
-          {/* <form action="get"> */}
           <input
             className="id"
             type="text"
             name="id"
             placeholder="아이디"
-            onChange={this.handleInput}
+            onChange={this.handleLoginInput}
           />
           <input
             className="pw"
             type="password"
             name="pw"
             placeholder="비밀번호"
-            onChange={this.handleInput}
+            onChange={this.handleLoginInput}
           />
-          {/* </form> */}
           <div className="saveId">
             <button />
             <p>아이디저장</p>
@@ -106,20 +93,7 @@ class Login extends Component {
         </section>
         <section className="loginLink">
           <p>SNS 로그인</p>
-          <div className="snsWrap">
-            <div>
-              <img src={Naver} alt="#" />
-              <p>네이버</p>
-            </div>
-            <div>
-              <img src={Kakao} alt="#" />
-              <p>카카오</p>
-            </div>
-            <div>
-              <img src={Google} alt="#" />
-              <p>구글</p>
-            </div>
-          </div>
+          <SnsWrap naver="네이버" kakao="카카오" google="구글" />
           <button>비회원 주문조회</button>
         </section>
       </div>

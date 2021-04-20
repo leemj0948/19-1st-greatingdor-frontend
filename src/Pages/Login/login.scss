@@ -1,8 +1,5 @@
 @import '../../Styles/common.scss';
 @import '../../Styles/reset.scss';
-* {
-  box-sizing: border-box;
-}
 .login {
   width: 40vw;
   height: 100%;
@@ -14,6 +11,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     h1 {
       font-size: 1.5rem;
       font-weight: 900;
@@ -32,22 +30,25 @@
       grid-template-columns: 1fr 1fr;
       text-align: center;
       line-height: 3.8rem;
-      #hpointMember {
-        border-left: 1px solid #bebebe;
-        border-top: 1px solid #bebebe;
+
+      .borderPoint {
+        border-left: 3px solid black;
+        border-top: 3px solid black;
+        border-right: 3px solid black;
+        border-bottom: none;
       }
-      #greatingMember {
-        border-right: 1px solid #bebebe;
-        border-top: 1px solid #bebebe;
+      .bottomPoint {
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        border-bottom: 3px solid black;
       }
-    }
-    form {
-      padding-top: 1rem;
+      .noBottom {
+        border-bottom: none;
+      }
     }
     input {
-      display: flex;
-      flex-direction: column;
-      margin: 10px auto;
+      margin: 1rem auto;
       width: 100%;
       height: 3rem;
     }
@@ -62,6 +63,7 @@
       color: $PrimaryWhite;
       font-weight: 900;
       border: none;
+      text-align: center;
     }
     .findOrRegister {
       height: 3rem;
@@ -104,30 +106,6 @@
       line-height: 2;
       font-weight: 800;
     }
-    .snsWrap {
-      height: 6rem;
-      display: grid;
-      text-align: center;
-      grid-template-columns: 1fr 1fr 1fr;
-      div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        img {
-          width: 50px;
-          height: 50px;
-        }
-        p {
-          display: block;
-          height: 15px;
-          margin: 0;
-          padding: 0;
-          margin-top: 10px;
-          font-size: 0.7rem;
-        }
-      }
-    }
     button {
       width: 100%;
       height: 2.5rem;
@@ -138,16 +116,4 @@
       margin-bottom: 5rem;
     }
   }
-}
-.borderPoint {
-  border-left: 3px solid black;
-  border-top: 3px solid black;
-  border-right: 3px solid black;
-  border-bottom: none;
-}
-.bottomPoint {
-  border-left: none;
-  border-top: none;
-  border-right: none;
-  border-bottom: 3px solid black;
 }
