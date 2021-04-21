@@ -46,10 +46,10 @@ class Cart extends Component {
                   <img scr="/" alt="no img" />
                   <div className="item-name">
                     <a href="#" className="package">
-                      [달래된장]] 여기 맵돌려야되요
+                      [달래된장]] 여기 맵
                     </a>
                     <a href="#" className="product">
-                      [달래된장] 미니미 베리베리{' '}
+                      [달래된장] 대애앤장{' '}
                     </a>
                   </div>
 
