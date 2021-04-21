@@ -2,8 +2,8 @@
 import React, { Component } from 'react';
 import './signUp.scss';
 import SnsWrap from '../../Components/SnsWrap/SnsWrap';
-import GreatingLogo from '../../Img/greatingdor-logo.jpg';
-import HpointLogo from '../../Img/hpoint-logo.jpg';
+import GreatingLogo from '../../img/greatingdor-logo.jpg';
+import HpointLogo from '../../img/hpoint-logo.jpg';
 
 export class SignUp extends Component {
   render() {
