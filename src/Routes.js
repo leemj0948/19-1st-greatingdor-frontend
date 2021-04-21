@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import SignUp from './Pages/SignUp/SignUp';
+import SignUp from './Pages/SignUp/signUp';
 import SignUpDetail from './Pages/SignUpDetail/SignUpDetail';
 
 export class Routes extends Component {
