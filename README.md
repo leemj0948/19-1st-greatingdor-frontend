@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# 그리팅몰 클론 프로젝트 소개
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## 프로젝트 소개
 
-In the project directory, you can run:
+- 팀명: Greatingdor
+- 설명: 건강식 식단 및 식자재 판매 플랫폼인 그리팅몰(greating mall) 사이트 클론 프로젝트
+- 그리팅몰 original website (https://www.greating.co.kr)
 
-### `npm start`
+![](https://images.velog.io/images/elena_park/post/09c32465-1e57-4c15-9ce9-6af103b0010b/%EA%B7%B8%EB%A6%AC%ED%8C%85%EB%AA%B0%20original%20main.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 개발 기간
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- 21.04.12 ~ 21.04.23 (11일)
 
-### `npm test`
+## 개발 인원
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 프론트엔드: 박성은 박세리 이명진
+- 백엔드: 이서진 이윤형 함경재
 
-### `npm run build`
+## 프론트엔드 기술스택
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- JavaScript(ES6)
+- React.JS
+- React-Router
+- Sass
+- HTML, CSS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 협업도구
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Git, Github : 버전관리 및 협업
+- Trello : 일정 관리
+- Slack : 비대면 소통
 
-### `npm run eject`
+## 프론트엔드 주요 구현 사항
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. 로그인 페이지 (박세리)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- 로그인 기능 : 서버로부터 회원가입이 된 회원 정보를 받아온 뒤 로그인 구현
+  ![](https://images.velog.io/images/elena_park/post/25ce9678-de9f-4871-afa1-06fb07373b60/%EB%A1%9C%EA%B7%B8%EC%9D%B8.gif)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. 회원가입 페이지 (박세리)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- 회원가입 기능 : fetch에 post로 회원 정보를 서버에 보내고 서버에 성공적으로 전달이 되는 경우 success라는 message가 뜨며 로그인 페이지로 이동
+  ![](https://images.velog.io/images/elena_park/post/e22e6f24-5133-4f45-b483-1ce2a2dc3305/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85.gif)
 
-## Learn More
+3. 메인 상품 리스트 페이지 (이명진)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- 광고 배너 제작 : 광고 배너 코드 구현
+- 제품 카드 제작 : 상세페이지로의 연결 및 제품 간략 정보를 담은 제품 카드 구현
+- 제품 카테고리 필터 기능 : 제품 종류를 토대로 필터가 되는 기능 구현
+- 제품 페이지네이션 기능 : 제품 수량이 많을 경우 페이지 넘버를 통해 이전, 다음 페이지를 탐색할 수 있는 페이지네이션 기능 구현
+  ![](https://images.velog.io/images/elena_park/post/3ebcabf7-59e4-49ae-8bb1-26a378f43277/%EA%B4%91%EA%B3%A0%EB%B0%B0%EB%84%88.gif)
+  ![](https://images.velog.io/images/elena_park/post/9ed4542e-ddc7-4a58-9174-f9d782e11e59/%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC%20.gif)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. 공용컴포넌트 구현 (박성은)
 
-### Code Splitting
+- Navbar : 카테고리 및 검색창 드롭다운 구현, 검색창 아이템 다중선택 구현 (검색 기능은 2차 프로젝트 진행 후 추가 구현 예정)
+- Footer : 외부 링크 연결
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![](https://images.velog.io/images/elena_park/post/3ed72a2a-a745-462b-bcc9-fe892231289e/%EB%84%A4%EB%B8%8C%EB%B0%94.gif)
 
-### Analyzing the Bundle Size
+5. 상품 상세 페이지 (박성은)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- 동적 라우팅 이용하여 상품 리스트에서 클릭한 아이템에 해당하는 data 호출하여 상세페이지 구현
+- 장바구니, 구매하기 클릭 시 옵션 모달창 생성 및 수량 증감 구현
+- 상세페이지 하단 메뉴 탭 구현 및 각 탭에 해당하는 data 출력 (상품정보,교환/반품 탭에서는 우선 클릭 제품의 id 번호를 반영한 이미지를 임시로 사용하였음)
+- 상품후기, 상품문의 리스트 드롭다운 구현
+  ![](https://images.velog.io/images/elena_park/post/08345411-9d99-454f-9453-9ed5f843a7d9/%EC%83%81%EC%84%B8.gif)
 
-### Making a Progressive Web App
+## 각 팀원 블로그
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- 박성은 : https://velog.io/@elena_park
+- 박세리 : https://velog.io/@moripark32
+- 이명진 : https://velog.io/@ljo094822
 
-### Advanced Configuration
+## References
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+이 프로젝트는 그리팅몰 사이트를 참고하여 학습 목적으로 진행된 프로젝트입니다.

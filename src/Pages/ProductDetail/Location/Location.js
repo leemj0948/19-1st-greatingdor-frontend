@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './Location/Location.scss';
+import './Location.scss';
 
 class Location extends Component {
   render() {

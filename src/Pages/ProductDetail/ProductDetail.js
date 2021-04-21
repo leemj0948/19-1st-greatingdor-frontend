@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Footer from '../../Components/Footer/Footer';
 import Location from './Location/Location';
 import ImageSlider from './ProductInfo/ImageSlider/ImageSlider';
 import ProductInfo from './ProductInfo/ProductInfo';
