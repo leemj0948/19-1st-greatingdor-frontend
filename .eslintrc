@@ -1,16 +1,4 @@
 {
-  "extends": [
-    "react-app",
-    "plugin:prettier/recommended",
-    "plugin:node/recommended",
-    "plugin:eslint-plugin/recommended",
-    "prettier"
-  ],
-  "plugins": ["prettier", "node", "eslint-plugin", "self"],
-  "env": { "mocha": true },
-  "root": true,
-  "rules": {
-    "self/prettier": ["error"],
-    "eslint-plugin/report-message-format": ["error", "^[^a-z].*\\.$"]
-  }
+  "extends": ["react-app", "plugin:prettier/recommended"],
+  "plugins": ["prettier"]
 }
