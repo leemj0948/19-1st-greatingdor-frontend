@@ -43,7 +43,7 @@
 2. 회원가입 페이지 (박세리)
 
 - 회원가입 기능 : fetch에 post로 회원 정보를 서버에 보내고 서버에 성공적으로 전달이 되는 경우 success라는 message가 뜨며 로그인 페이지로 이동
-  ![](https://images.velog.io/images/elena_park/post/e22e6f24-5133-4f45-b483-1ce2a2dc3305/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85.gif)
+  ![회원가입](https://user-images.githubusercontent.com/60565155/116185430-91cea180-a75c-11eb-885d-b4c8fad2a98c.gif)
 
 3. 메인 상품 리스트 페이지 (이명진)
 
@@ -52,7 +52,8 @@
 - 제품 카테고리 필터 기능 : 제품 종류를 토대로 필터가 되는 기능 구현
 - 제품 페이지네이션 기능 : 제품 수량이 많을 경우 페이지 넘버를 통해 이전, 다음 페이지를 탐색할 수 있는 페이지네이션 기능 구현
   ![](https://images.velog.io/images/elena_park/post/3ebcabf7-59e4-49ae-8bb1-26a378f43277/%EA%B4%91%EA%B3%A0%EB%B0%B0%EB%84%88.gif)
-  ![](https://images.velog.io/images/elena_park/post/9ed4542e-ddc7-4a58-9174-f9d782e11e59/%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC%20.gif)
+  ![카테고리_Trim](https://user-images.githubusercontent.com/60565155/116186258-3b626280-a75e-11eb-8559-b1dda404d20b.gif)
+  ![페이지네이션](https://user-images.githubusercontent.com/60565155/116187048-c132dd80-a75f-11eb-9792-9ad0310a40ad.gif)
 
 4. 공용컴포넌트 구현 (박성은)
 
@@ -67,8 +68,7 @@
 - 장바구니, 구매하기 클릭 시 옵션 모달창 생성 및 수량 증감 구현
 - 상세페이지 하단 메뉴 탭 구현 및 각 탭에 해당하는 data 출력 (상품정보,교환/반품 탭에서는 우선 클릭 제품의 id 번호를 반영한 이미지를 임시로 사용하였음)
 - 상품후기, 상품문의 리스트 드롭다운 구현
-
-![상세](https://user-images.githubusercontent.com/60565155/116176110-87a4a700-a74c-11eb-925c-276c5c8b7ebf.gif)
+  ![상세](https://user-images.githubusercontent.com/60565155/116176110-87a4a700-a74c-11eb-925c-276c5c8b7ebf.gif)
 
 ## 각 팀원 블로그
 
