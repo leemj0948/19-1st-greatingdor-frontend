@@ -59,7 +59,7 @@
 - Navbar : 카테고리 및 검색창 드롭다운 구현, 검색창 아이템 다중선택 구현 (검색 기능은 2차 프로젝트 진행 후 추가 구현 예정)
 - Footer : 외부 링크 연결
 
-![](https://images.velog.io/images/elena_park/post/3ed72a2a-a745-462b-bcc9-fe892231289e/%EB%84%A4%EB%B8%8C%EB%B0%94.gif)
+![네브바](https://user-images.githubusercontent.com/60565155/116176075-75c30400-a74c-11eb-9740-53ed8f09f0ee.gif)
 
 5. 상품 상세 페이지 (박성은)
 
@@ -67,7 +67,8 @@
 - 장바구니, 구매하기 클릭 시 옵션 모달창 생성 및 수량 증감 구현
 - 상세페이지 하단 메뉴 탭 구현 및 각 탭에 해당하는 data 출력 (상품정보,교환/반품 탭에서는 우선 클릭 제품의 id 번호를 반영한 이미지를 임시로 사용하였음)
 - 상품후기, 상품문의 리스트 드롭다운 구현
-  ![](https://images.velog.io/images/elena_park/post/08345411-9d99-454f-9453-9ed5f843a7d9/%EC%83%81%EC%84%B8.gif)
+
+![상세](https://user-images.githubusercontent.com/60565155/116176110-87a4a700-a74c-11eb-925c-276c5c8b7ebf.gif)
 
 ## 각 팀원 블로그
 
