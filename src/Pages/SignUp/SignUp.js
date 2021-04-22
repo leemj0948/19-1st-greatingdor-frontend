@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React, { Component } from 'react';
-import './signUp.scss';
+import './SignUp.scss';
 import SnsWrap from '../../Components/SnsWrap/SnsWrap';
 import GreatingLogo from '../../img/greatingdor-logo.jpg';
 import HpointLogo from '../../img/hpoint-logo.jpg';
