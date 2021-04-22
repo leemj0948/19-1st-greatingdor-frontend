@@ -1,0 +1,42 @@
+@import '../../../../Styles/common.scss';
+
+.inquiry_tab {
+  .inquiry_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid $PrimaryLightGreen;
+
+    .total {
+      font-weight: bold;
+    }
+  }
+
+  .inquiry_container {
+    .inquiry_contents {
+      padding-top: 10px;
+      border-bottom: 1px solid $PrimaryLightGreen;
+      .contents {
+        display: flex;
+        justify-content: space-between;
+
+        .title_container {
+          font-weight: bold;
+
+          button {
+            cursor: pointer;
+          }
+        }
+
+        .right {
+          .user_id,
+          .date {
+            margin-right: 10px;
+            color: darkgray;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
