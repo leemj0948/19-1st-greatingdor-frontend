@@ -1,0 +1,11 @@
+@import '../../../Styles/common.scss';
+.true {
+  background-color: $PrimaryGreen;
+}
+.false {
+  background-color: $PrimaryGrey;
+}
+.buttonList {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,3 +1,4 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 $PrimaryGreen: rgb(127, 124, 20);
 $PrimaryLightGreen: rgb(226, 226, 199);
 $PrimaryWhite: rgb(255, 255, 255);
@@ -19,6 +20,7 @@ $PrimaryGrey: rgb(242, 242, 242);
 %flex-space-between {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 body {
@@ -56,4 +58,8 @@ button {
 
 ul {
   list-style: none;
+}
+
+li {
+  @extend %flex-space-between;
 }
