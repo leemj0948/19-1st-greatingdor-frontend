@@ -7,7 +7,7 @@ class Card extends Component {
     return (
       <li
         className="img"
-        onClick={() => this.props.history.push('/products/:id')}
+        // onClick={() => this.props.history.push('/products/:id')}
       >
         <div className="imgFrame">
           <img src={img} alt="제품이미지 " />
