@@ -41,8 +41,10 @@ class SignUpDetail extends Component {
     })
       .then(response => response.json())
       .then(result => {
-        alert('success');
-        this.props.history.push('/login');
+        if (result.message === 'SUCCESS') {
+          alert('success');
+          this.props.history.push('/login');
+        }
       });
   };
   render() {
