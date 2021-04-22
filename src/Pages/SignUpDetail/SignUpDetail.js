@@ -17,7 +17,7 @@ class SignUpDetail extends Component {
     };
   }
   handleSignUpInput = e => {
-    const { name, value } = e.target; // const name = e.target.name
+    const { name, value } = e.target;
     this.setState({
       [name]: value,
     });
