@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../Login/login.scss';
+import '../Login/Login.scss';
 import SnsWrap from '../../Components/SnsWrap/SnsWrap';
 
 class Login extends Component {
