@@ -6,6 +6,12 @@ $PrimaryYellow: rgb(222, 172, 49);
 $PrimaryBlack: rgb(19, 19, 19);
 $PrimaryGrey: rgb(242, 242, 242);
 
+.middlePosition {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 %flex-center {
   display: flex;
   justify-content: center;
