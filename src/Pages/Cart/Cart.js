@@ -62,7 +62,7 @@ class Cart extends Component {
           <div className="selectProducts">
             <ul className="cartSelectList">
               
-                {this.state.get.map((ele, index) => { 
+                {this.state.get&&this.state.get.map((ele, index) => { 
                 <li className="item">
                 <label>
                   <input className="checkCircle" type="checkbox" />
