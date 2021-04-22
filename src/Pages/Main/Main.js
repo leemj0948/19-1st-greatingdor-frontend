@@ -22,7 +22,6 @@ class Main extends Component {
   loadData = () => {
     fetch(`http://10.58.5.188:8000/products?page=1`, {
       method: 'GET',
-      //
     })
       .then(res => res.json())
       .then(data => {
@@ -82,14 +81,10 @@ class Main extends Component {
               get: data.RESULT,
             });
           });
-        console.log(
-          `http://10.58.5.188:8000/products?category=${
-            this.state.categoryNum + 2
-          }`
-        );
       }
     );
   };
+
   getData = () => {
     fetch(`http://10.58.5.188:8000/products?page=${this.state.query}`, {
       method: 'GET',
@@ -101,9 +96,11 @@ class Main extends Component {
         });
       });
   };
+
   componentDidMount = prevState => {
     this.loadData();
   };
+
   componentDidUpdate(prevProps, prevState) {
     if (prevState.query !== this.state.query) {
       this.getData();
@@ -111,7 +108,6 @@ class Main extends Component {
   }
   render() {
     const { get, isButtonSelect, num, isCategorySelect } = this.state;
-    console.log(this.state.query);
     return (
       <div>
         <AdBanner />

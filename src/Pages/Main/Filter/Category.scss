@@ -5,3 +5,7 @@
 .false {
   background-color: $PrimaryGrey;
 }
+.buttonList {
+  display: flex;
+  flex-direction: column;
+}

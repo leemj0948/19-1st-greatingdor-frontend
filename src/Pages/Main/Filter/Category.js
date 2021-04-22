@@ -9,10 +9,8 @@ class Category extends Component {
         className={`buttonList ${isSelected ? 'true' : 'false'}`}
         onClick={() => handleClick(elementIndex)}
       >
-        <a>
-          <span className="icons">{icon}</span>
-          {content}
-        </a>
+        <span className="icons">{icon}</span>
+        {content}
       </li>
     );
   }

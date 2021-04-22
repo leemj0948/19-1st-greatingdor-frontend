@@ -2,7 +2,7 @@
 @import '../../../Styles/common.scss';
 
 .marketList {
-  margin: 0px auto;
+  margin: 20px 0px auto;
   width: 1800px;
   height: 350px;
 
@@ -17,6 +17,7 @@
     justify-content: center;
     width: 1800px;
     height: 300px;
+
     .categoryButton {
       display: flex;
       justify-content: space-evenly;
@@ -34,9 +35,11 @@
     background-color: $PrimaryGrey;
     font-size: 16px;
     cursor: pointer;
+
     &.true {
       background-color: $PrimaryGreen;
     }
+
     &.false {
       background-color: $PrimaryGrey;
     }
@@ -44,6 +47,7 @@
     &:hover {
       background-color: rgb(226, 226, 199);
     }
+
     a:active,
     a:visited {
       @extend %flex-center;
@@ -52,6 +56,7 @@
       border-radius: 100%;
       background-color: $PrimaryGreen;
     }
+
     .icons {
       @extend %flex-center;
       padding: 5px;

@@ -6,6 +6,7 @@
   margin: 20px auto;
   width: 1035px;
   font-size: 16px;
+
   .optional {
     display: flex;
     justify-content: space-between;
@@ -16,10 +17,12 @@
       font-size: 20px;
     }
   }
+
   .cardNum {
     margin-top: 18px;
     width: 120px;
   }
+
   .checkList {
     width: 172px;
     height: 42px;

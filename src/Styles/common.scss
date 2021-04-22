@@ -14,6 +14,7 @@ $PrimaryGrey: rgb(242, 242, 242);
 %flex-space-between {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 body {
@@ -51,4 +52,8 @@ button {
 
 ul {
   list-style: none;
+}
+
+li {
+  @extend %flex-space-between;
 }
