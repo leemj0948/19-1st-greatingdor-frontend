@@ -4,19 +4,19 @@ class Cart extends Component {
   constructor() {
     super();
     this.state = {
-      number: 0,
+      number: 1,
     };
   }
   handleIncrease = () => {
-    if (this.state.number > 30) {
-      return 30;
-    }
+    // if (this.state.number > 30) {
+    //   return 30;
+    // }
     this.setState({
       number: this.state.number + 1,
     });
   };
   handleDecrease = () => {
-    if (this.state.number < 2) {
+    if (this.state.number <= 1) {
       return 1;
     }
     this.setState({
@@ -61,18 +61,14 @@ class Cart extends Component {
                     <button onClick={this.handleIncrease}>
                       <i class="fas fa-plus"></i>
                     </button>
-                    <span></span>
                   </form>
                   <div className="price">
                     <dl className="total-price-wrapper">
                       <dt className="total-price">
-                        백엔드가격<span>원</span>
+                        백엔드에서 받는 가격<span>원</span>
                       </dt>
-                      <dd className="discount-price">
-                        500 <span>원</span>
-                      </dd>
                     </dl>
-                    <button className="del-btn">
+                    <button className="delete-btn">
                       <i class="fas fa-times"></i>
                     </button>
                   </div>
