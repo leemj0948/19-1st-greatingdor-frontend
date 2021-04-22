@@ -2,8 +2,8 @@
 import React, { Component } from 'react';
 import './SignUp.scss';
 import SnsWrap from '../../Components/SnsWrap/SnsWrap';
-import GreatingLogo from '../../img/greatingdor-logo.jpg';
-import HpointLogo from '../../img/hpoint-logo.jpg';
+import GreatingLogo from '../../Img/greatingdor-logo.jpg';
+import HpointLogo from '../../Img/hpoint-logo.jpg';
 
 export class SignUp extends Component {
   render() {
@@ -21,7 +21,7 @@ export class SignUp extends Component {
         <article className="signUpMember">
           <div className="integratedMember">
             <b>통합회원 가입</b>
-            <img src={HpointLogo} alt="#"></img>
+            <img src={HpointLogo} alt="h-point 로고" />
             <ul>
               {SENTENCE.map(p => (
                 <li>{p.content}</li>
@@ -33,7 +33,7 @@ export class SignUp extends Component {
           </div>
           <div className="generalMember">
             <b>그리팅 일반회원 가입</b>
-            <img src={GreatingLogo} alt="#"></img>
+            <img src={GreatingLogo} alt="greating 로고"></img>
             <p>
               본인인증 절차없이 사용중인 이메일 또는 SNS계정 정보로 간편하게
               가입하실 수 있습니다.

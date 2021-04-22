@@ -2,16 +2,16 @@
 @import '../../Styles/reset.scss';
 .signUp {
   .signUpTitle {
-    width: 70vw;
-    margin: 0 auto;
-    height: 30vh;
     display: flex;
+    width: 70vw;
+    height: 30vh;
+    margin: 0 auto;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     .signUpTitleWords {
-      font-size: 20px;
       padding: 1rem;
+      font-size: 20px;
       font-weight: 900;
     }
     .signUpGreetingWords {
@@ -25,19 +25,19 @@
     }
   }
   .signUpMember {
+    display: flex;
     width: 90vw;
     height: 50vh;
     margin: 0 auto;
-    display: flex;
     justify-content: space-between;
     .integratedMember {
-      width: 49%;
       position: relative;
-      border-top: 2px solid black;
       display: flex;
+      width: 49%;
+      border-top: 2px solid black;
+      box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);
       flex-direction: column;
       text-align: center;
-      box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);
       b {
         font-weight: 900;
         top: 30px;
@@ -64,12 +64,9 @@
         @extend .middlePosition;
         top: 9rem;
         li {
+          margin-top: 2rem;
           font-weight: 900;
           font-size: 0.8rem;
-          margin-top: 2rem;
-          // &:last-child {
-          //   margin-bottom: 0;
-          // }
         }
       }
       button {
@@ -82,10 +79,10 @@
       }
     }
     .generalMember {
-      width: 49%;
       position: relative;
-      border-top: 2px solid black;
       display: flex;
+      width: 49%;
+      border-top: 2px solid black;
       flex-direction: column;
       text-align: center;
       box-shadow: 0px 5px 10px 3px rgba(0, 0, 0, 0.2);

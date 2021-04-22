@@ -8,12 +8,12 @@ class SignUpDetail extends Component {
       name: '',
       id: '',
       password: '',
-      email_account: '',
-      email_website: '',
-      first_number: '010',
-      second_number: '',
-      last_number: '',
-      date_birth: '',
+      emailAccount: '',
+      emailWebsite: '',
+      firstNumber: '010',
+      secondNumber: '',
+      lastNumber: '',
+      dateBirth: '',
     };
   }
   handleSignUpInput = e => {
@@ -30,13 +30,13 @@ class SignUpDetail extends Component {
       body: JSON.stringify({
         account: this.state.id,
         password: this.state.password,
-        email: `${this.state.email_account}@${this.state.email_website}`,
+        email: `${this.state.emailAccount}@${this.state.emailWebsite}`,
         name: this.state.name,
-        date_birth: this.state.date_birth,
+        date_birth: this.state.dateBirth,
         phone_number:
-          this.state.first_number +
-          this.state.second_number +
-          this.state.last_number,
+          this.state.firstNumber +
+          this.state.secondNumber +
+          this.state.lastNumber,
       }),
     })
       .then(response => response.json())
@@ -46,7 +46,6 @@ class SignUpDetail extends Component {
       });
   };
   render() {
-    console.log(this.state);
     return (
       <div className="signUpDetail">
         <h1 class="signUpTitle">정보입력</h1>
@@ -102,13 +101,13 @@ class SignUpDetail extends Component {
                 <div class="inputWrap">
                   <input
                     type="text"
-                    name="email_account"
+                    name="emailAccount"
                     onChange={this.handleSignUpInput}
                   />
                   <span>@</span>
                   <input
                     type="text"
-                    name="email_website"
+                    name="emailWebsite"
                     onChange={this.handleSignUpInput}
                     className="marginRight"
                   />
@@ -125,7 +124,7 @@ class SignUpDetail extends Component {
                 <div class="fillUpRule">
                   <input
                     type="text"
-                    name="date_birth"
+                    name="dateBirth"
                     onChange={this.handleSignUpInput}
                   />
                   <span>* 생년월일을 '-'로 구분하여 입력해 주세요</span>
@@ -134,7 +133,7 @@ class SignUpDetail extends Component {
               <li>
                 <span className="infoTitle">휴대폰 번호</span>
                 <div class="inputWrap">
-                  <select name="first_number" onChange={this.handleSignUpInput}>
+                  <select name="firstNumber" onChange={this.handleSignUpInput}>
                     <option>010</option>
                     <option>011</option>
                     <option>016</option>
@@ -142,13 +141,13 @@ class SignUpDetail extends Component {
                   <span>-</span>
                   <input
                     type="text"
-                    name="second_number"
+                    name="secondNumber"
                     onChange={this.handleSignUpInput}
                   />
                   <span>-</span>
                   <input
                     type="text"
-                    name="last_number"
+                    name="lastNumber"
                     onChange={this.handleSignUpInput}
                   />
                 </div>
