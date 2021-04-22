@@ -5,7 +5,7 @@ class AdBanner extends Component {
     super();
     this.state = {
       img: 1,
-      display: 'none',
+      display: false,
     };
   }
 
@@ -32,17 +32,17 @@ class AdBanner extends Component {
       });
     }
   };
-
-  buttonDisplayOn = () => {
-    this.setState({
-      display: 'block',
-    });
-  };
-
-  buttonDisplayOff = () => {
-    this.setState({
-      display: 'none',
-    });
+  //e.type
+  buttonDisplayOn = e => {
+    if (e.type === 'pointerenter') {
+      this.setState({
+        display: 'block',
+      });
+    }
+    if (e.type === 'pointerleave')
+      this.setState({
+        display: 'none',
+      });
   };
 
   componentDidMount() {
@@ -54,8 +54,8 @@ class AdBanner extends Component {
       <>
         <div
           className="mainBanner"
-          onPointerOver={this.buttonDisplayOn}
-          onPointerOut={this.buttonDisplayOff}
+          onPointerEnter={this.buttonDisplayOn}
+          onPointerLeave={this.buttonDisplayOn}
         >
           <button
             className="leftArrow"

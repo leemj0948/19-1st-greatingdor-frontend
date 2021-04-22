@@ -8,27 +8,17 @@ class Filter extends Component {
     this.state = {
       hover: '',
       fontColor: '',
-      isCategorySelect: Array(TITLES.length).fill(false).fill(true, 0, 1),
+      num: 1,
     };
   }
 
-  handleClick = idx => {
-    const newArr = Array(TITLES.length).fill(false);
-    newArr[idx] = true;
-    this.setState({
-      isCategorySelect: newArr,
-      // isClicked: this.state.isClicked.map((element, index) => {
-      //   return index === idx ? !element : element;
-      // if (index === idx) {
-      //   !element;
-      // } else {
-      //   element;
-      // }
-    });
-  };
-
+  componentDidUpdate(prevState) {
+    if (this.state.num !== this.state.num) {
+      this.fetchData(this.state.num);
+    }
+  }
   render() {
-    const { isClicked, isCategorySelect } = this.state;
+    const { isCategorySelect, handleClick } = this.props;
     return (
       <div>
         <div className="marketList">
@@ -42,7 +32,7 @@ class Filter extends Component {
                     icon={elm.icon}
                     content={elm.content}
                     isSelected={isCategorySelect[index]}
-                    handleClick={this.handleClick}
+                    handleClick={handleClick}
                     elementIndex={index}
                   />
                 );
@@ -57,7 +47,7 @@ class Filter extends Component {
 const TITLES = [
   { content: '전체', icon: <i class="fas fa-utensils"></i> },
   { content: '건강반찬', icon: <i class="fab fa-aws"></i> },
-  { content: '밥/국', icon: <i class="fas fa-balance-scale"></i> },
+  { content: '밥/국국', icon: <i class="fas fa-balance-scale"></i> },
   { content: '샐러드', icon: <i class="fab fa-apple"></i> },
   { content: '죽/스프', icon: <i class="fab fa-angrycreative"></i> },
   { content: '소스/양념', icon: <i class="fas fa-mortar-pestle"></i> },

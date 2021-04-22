@@ -5,7 +5,10 @@ class Card extends Component {
   render() {
     const { img, sub, title, price, category, isNew, store } = this.props;
     return (
-      <li className="img">
+      <li
+        className="img"
+        onClick={() => this.props.history.push('/product/detail/145')}
+      >
         <div className="imgFrame">
           <img src={img} alt="제품이미지 " />
           {isNew && <span className="new">{isNew}New</span>}
