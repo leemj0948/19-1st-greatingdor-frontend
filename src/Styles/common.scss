@@ -21,7 +21,12 @@ $PrimaryGrey: rgb(242, 242, 242);
 %flex-space-between {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+}
+
+.middlePosition {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 body {
