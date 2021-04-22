@@ -1,8 +1,8 @@
 /* eslint-disable prettier/prettier */
 import React, { Component } from 'react';
-import Naver from '../../imgwhole/icon-naver.png';
-import Kakao from '../../imgwhole/icon-kakao.png';
-import Google from '../../imgwhole/icon-google.png';
+import Naver from '../../Img/icon-naver.png';
+import Kakao from '../../Img/icon-kakao.png';
+import Google from '../../Img/icon-google.png';
 import '../SnsWrap/SnsWrap.scss';
 
 class SnsWrap extends Component {
