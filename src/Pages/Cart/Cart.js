@@ -5,6 +5,7 @@ class Cart extends Component {
     super();
     this.state = {
       number: 1,
+      get: [],
     };
   }
   handleIncrease = () => {
@@ -23,6 +24,32 @@ class Cart extends Component {
   handleSubmit = e => {
     e.preventDefault();
   };
+  componentDidMount = () => {
+    fetch('http://10.58.7.158:8000/orders/cart', { method: 'GET' })
+      .then(res => res.json())
+      .then(data =>
+        this.setState(
+          {
+            get: data,
+          },
+          () => {
+            console.log(this.state.data);
+          }
+        )
+      );
+  };
+  // componentDidUpdate(prevState) {
+  //   if (prevState.get !== this.state.get) {
+  //     fetch('http://10.58.7.158:8000/orders/cart', { method: 'GET' })
+  //       .then(res => res.json())
+  //       .then(data =>
+  //         this.setState({
+  //           get: data,
+  //         })
+  //       );
+  //   }
+  // }
+  //img_url,title,price
   render() {
     return (
       <main className="cartWrapper">
@@ -34,18 +61,14 @@ class Cart extends Component {
           </div>
           <div className="selectProducts">
             <ul className="cartSelectList">
-              <li className="item">
+                {this.state.get.map((ele, index) => { 
+                <li className="item">
                 <label>
                   <input className="checkCircle" type="checkbox" />
                 </label>
-                <img scr="/" alt="no img" />
+                <span scr="/" alt="no img" >{ele.img_url}<span/>
                 <div className="itemName">
-                  <a href="#" className="package">
-                    [달래된장]] 여기 맵
-                  </a>
-                  <a href="#" className="product">
-                    [달래된장] 대애앤장{' '}
-                  </a>
+                  <span className="package">{ele.title}</span>
                 </div>
                 <form className="countBtn" onSubmit={this.handleSubmit}>
                   <button>
@@ -58,15 +81,17 @@ class Cart extends Component {
                 </form>
                 <div className="price">
                   <dl className="totalPriceWrapper">
-                    <dt className="totalPrice">
-                      백엔드에서 받는 가격<span>원</span>
-                    </dt>
+                      <dt className="totalPrice">
+                     {ele.price}<span>원</span>
+                      </dt>
                   </dl>
                   <button className="deleteBtn">
                     <i class="fas fa-times"></i>
                   </button>
                 </div>
-              </li>
+                </li>
+              })}
+             
             </ul>
           </div>
           <div className="cartResult">
