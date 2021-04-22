@@ -61,28 +61,10 @@ class Main extends Component {
   categoryClick = idx => {
     const newArr = Array(TITLES.length).fill(false);
     newArr[idx] = true;
-    this.setState(
-      {
-        isCategorySelect: newArr,
-        categoryNum: idx,
-      },
-      () => {
-        fetch(
-          `http://10.58.5.188:8000/products?category=${
-            this.state.categoryNum + 2
-          }`,
-          {
-            method: 'GET',
-          }
-        )
-          .then(res => res.json())
-          .then(data => {
-            this.setState({
-              get: data.RESULT,
-            });
-          });
-      }
-    );
+    this.setState({
+      isCategorySelect: newArr,
+      categoryNum: idx,
+    });
   };
 
   getData = () => {
@@ -104,6 +86,22 @@ class Main extends Component {
   componentDidUpdate(prevProps, prevState) {
     if (prevState.query !== this.state.query) {
       this.getData();
+    }
+    if (prevState.categoryNum !== this.state.categoryNum) {
+      fetch(
+        `http://10.58.5.188:8000/products?category=${
+          this.state.categoryNum + 2
+        }`,
+        {
+          method: 'GET',
+        }
+      )
+        .then(res => res.json())
+        .then(data => {
+          this.setState({
+            get: data.RESULT,
+          });
+        });
     }
   }
   render() {

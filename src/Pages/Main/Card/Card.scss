@@ -16,6 +16,7 @@
 
 .cards {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   margin: 0px auto;
@@ -25,6 +26,7 @@
     margin: 10px;
     width: 340px;
     height: 513px;
+    flex-direction: column;
     font-weight: bold;
     border-bottom: 1px solid gray;
 
@@ -37,6 +39,7 @@
       .new {
         position: absolute;
         @extend %flex-center;
+        align-items: center;
         top: 10px;
         left: 0;
         width: 100px;
@@ -90,6 +93,11 @@
       width: 340px;
       height: 24px;
       font-size: 20px;
+    }
+    .category {
+      @extend %flex-center;
+      margin-bottom: 10px;
+      align-self: end;
     }
   }
 }
