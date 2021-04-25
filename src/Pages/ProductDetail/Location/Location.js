@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import './Location/Location.scss';
 
 class Location extends Component {
   render() {
@@ -6,7 +7,7 @@ class Location extends Component {
     return (
       <div className="location">
         <span>
-          HOME > {item.menu_name} > {item.category_name}
+          HOME {'>'} {item.menu_name} {'>'} {item.category_name}
         </span>
       </div>
     );

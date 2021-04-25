@@ -61,7 +61,12 @@ class NavBar extends Component {
             </span>
           </div>
           <div className="navbar_logo">
-            <img src="/img/img_header_logo_Greating.png" alt="main logo" />
+            <Link to="/">
+              <img
+                src="/img/Screenshot_20210415-164434_Samsung Internet_mh1619137968721.jpg"
+                alt="main logo"
+              />
+            </Link>
           </div>
           <ul className="navbar_categories">
             {/* dropdown 1 - category부문*/}

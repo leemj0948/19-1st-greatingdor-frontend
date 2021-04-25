@@ -22,9 +22,10 @@ class SignUpDetail extends Component {
       [name]: value,
     });
   };
+  //http://3.36.96.154:8000/members/signup
   goToLogin = e => {
     e.preventDefault();
-    fetch('http://10.58.7.158:8000/members/signup', {
+    fetch('http://10.58.1.218:8000/members/signup', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -41,7 +42,7 @@ class SignUpDetail extends Component {
     })
       .then(response => response.json())
       .then(result => {
-        if (result.message === 'SUCCESS') {
+        if (result.MESSAGE === 'SUCCESS') {
           alert('success');
           this.props.history.push('/login');
         }
@@ -95,7 +96,11 @@ class SignUpDetail extends Component {
                 </div>
               </li>
               <li>
-                <span className="infoTitle">비밀번호 확인</span>
+                <span className="infoTitle">
+                  비밀번호
+                  <br />
+                  확인
+                </span>
                 <input type="password" />
               </li>
               <li>

@@ -9,11 +9,16 @@ class ReviewTab extends Component {
   };
 
   componentDidMount = () => {
-    fetch(`http://10.58.7.140:8000/products/${this.props.item.id}/reviews`)
+    fetch('/data/reviewTab.json')
       .then(response => response.json())
-      .then(data => {
-        this.setState({ reviewData: data.RESULT });
-      });
+      .then(
+        data => {
+          this.setState({ reviewData: data.RESULT });
+        },
+        () => {
+          console.log(this.state.reviewData);
+        }
+      );
   };
 
   handleDropdown = id => {

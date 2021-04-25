@@ -19,6 +19,7 @@
     padding-top: 10px;
     border-bottom: 1px solid $PrimaryLightGreen;
     .review_contents {
+      width: 100%;
       .title_container {
         display: flex;
         justify-content: space-between;
@@ -41,6 +42,7 @@
       }
       .date {
         color: darkgray;
+        float: left;
       }
     }
   }

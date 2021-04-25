@@ -20,9 +20,10 @@ class Login extends Component {
     const { name, value } = e.target;
     this.setState({ [name]: value });
   };
+  //http://3.36.96.154:8000/members/signin
   goToMain = e => {
     e.preventDefault();
-    fetch('http://10.58.7.158:8000/members/signin', {
+    fetch('http://10.58.1.218:8000/members/signin', {
       method: 'POST',
       body: JSON.stringify({
         account: this.state.id,
@@ -33,7 +34,7 @@ class Login extends Component {
       .then(res => {
         if (res.Token) {
           localStorage.setItem('Token', res.Token);
-          this.props.history.push('/main');
+          this.props.history.push('/');
         }
       });
   };
