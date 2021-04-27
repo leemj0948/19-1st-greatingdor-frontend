@@ -25,7 +25,7 @@ class Cart extends Component {
     e.preventDefault();
   };
   componentDidMount = () => {
-    fetch('http://10.58.7.158:8000/orders/cart', { method: 'GET' })
+    fetch('http://3.36.96.154:8000/orders/cart', { method: 'GET' })
       .then(res => res.json())
       .then(data =>
         this.setState(
@@ -82,7 +82,7 @@ class Cart extends Component {
                 <div className="price">
                   <dl className="totalPriceWrapper">
                       <dt className="totalPrice">
-                     {ele.price}<span>원</span>
+                       {ele.price}<span>원</span>
                       </dt>
                   </dl>
                   <button className="deleteBtn">
@@ -91,7 +91,6 @@ class Cart extends Component {
                 </div>
                 </li>
               })}
-             
             </ul>
           </div>
           <div className="cartResult">

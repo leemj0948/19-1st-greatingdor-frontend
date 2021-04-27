@@ -14,8 +14,9 @@ export class SignUp extends Component {
           <p className="signUpGreetingWords">그리팅도르에 오신걸 환영합니다</p>
           <p className="signUpGreetingDetails">
             그리팅몰의 회원이되시면 할인쿠폰과 포인트 적립 등의 특별한 혜택을
-            누리실 수 있습니다. 아래 중 회원타입을 선택하신 후 회원가입을
-            진행해주시기 바랍니다.
+            누리실 수 있습니다.
+            <br /> 아래 중 회원타입을 선택하신 후 회원가입을 진행해주시기
+            바랍니다.
           </p>
         </article>
         <article className="signUpMember">

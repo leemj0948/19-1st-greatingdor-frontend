@@ -11,6 +11,8 @@
     background-color: #fff;
 
     li {
+      display: flex;
+      flex-direction: column;
       cursor: pointer;
       z-index: 1;
       text-align: center;

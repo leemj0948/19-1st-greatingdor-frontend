@@ -1,12 +1,10 @@
 @import '../../Styles/common.scss';
 @import '../../Styles/reset.scss';
 $Border: 3px solid black;
-
 .login {
   height: 100%;
   width: 40vw;
   margin: 0 auto;
-
   .loginTitle {
     width: 100%;
     height: 30vh;
@@ -14,7 +12,6 @@ $Border: 3px solid black;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     h1 {
       font-size: 1.5rem;
       font-weight: 900;
@@ -25,7 +22,6 @@ $Border: 3px solid black;
       font-weight: 500;
     }
   }
-
   .loginForm {
     .memberWrap {
       height: 4rem;
@@ -34,7 +30,6 @@ $Border: 3px solid black;
       grid-template-columns: 1fr 1fr;
       text-align: center;
       line-height: 3.8rem;
-
       .borderPoint {
         border-left: $Border;
         border-right: $Border;
@@ -51,7 +46,6 @@ $Border: 3px solid black;
         border-bottom: none;
       }
     }
-
     form {
       padding-top: 1rem;
     }
@@ -125,7 +119,6 @@ $Border: 3px solid black;
       display: grid;
       text-align: center;
       grid-template-columns: 1fr 1fr 1fr;
-
       div {
         display: flex;
         flex-direction: column;
@@ -156,7 +149,6 @@ $Border: 3px solid black;
       font-weight: 900;
       margin-top: 1rem;
       margin-bottom: 5rem;
-
       &:hover {
         cursor: pointer;
       }

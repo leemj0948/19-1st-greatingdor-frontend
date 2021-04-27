@@ -15,9 +15,9 @@ body {
 }
 
 #navbar {
+  border-bottom: 1px solid $PrimaryGreen;
   .navbar_inner_container {
     max-width: 1000px;
-    height: 100vh;
     margin: 0 auto;
 
     .navbar_user_area {
@@ -37,6 +37,9 @@ body {
     .navbar_logo {
       padding: 10px 20px;
       font-size: 30px;
+      img {
+        width: 300px;
+      }
     }
 
     .navbar_categories {

@@ -10,7 +10,7 @@ class ProductInfo extends Component {
 
   showCartModal = () => {
     this.onOffCartModal();
-    fetch(`http://10.58.7.140:8000/products/${this.props.item.id}/options`)
+    fetch(`http://3.36.96.154:8000/products/${this.props.item.id}/options`)
       .then(response => response.json())
       .then(data => {
         this.setState({

@@ -20,7 +20,7 @@ class Main extends Component {
     };
   }
   loadData = () => {
-    fetch(`http://10.58.5.188:8000/products?page=1`, {
+    fetch(`http://3.36.96.154:8000/products?page=1`, {
       method: 'GET',
     })
       .then(res => res.json())
@@ -68,7 +68,7 @@ class Main extends Component {
   };
 
   getData = () => {
-    fetch(`http://10.58.5.188:8000/products?page=${this.state.query}`, {
+    fetch(`http://3.36.96.154:8000/products?page=${this.state.query}`, {
       method: 'GET',
     })
       .then(res => res.json())
@@ -89,7 +89,7 @@ class Main extends Component {
     }
     if (prevState.categoryNum !== this.state.categoryNum) {
       fetch(
-        `http://10.58.5.188:8000/products?category=${
+        `http://3.36.96.154:8000/products?category=${
           this.state.categoryNum + 2
         }`,
         {
@@ -98,6 +98,7 @@ class Main extends Component {
       )
         .then(res => res.json())
         .then(data => {
+          // console.log(data.RESULT);
           this.setState({
             get: data.RESULT,
           });
@@ -118,6 +119,7 @@ class Main extends Component {
           {get.map((data, index) => (
             <Card
               key={index}
+              id={data.id}
               img={data.image}
               sub={data.description}
               title={data.title}

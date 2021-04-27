@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router';
 import './Card.scss';
 
 class Card extends Component {
   render() {
-    const { img, sub, title, price, category, isNew, store } = this.props;
+    const { img, id, sub, title, price, category, isNew, store } = this.props;
     return (
       <li
         className="img"
-        onClick={() => this.props.history.push('/products/:id')}
+        onClick={() => this.props.history.push(`/products/${this.props.id}`)}
       >
         <div className="imgFrame">
           <img src={img} alt="제품이미지 " />
@@ -28,4 +29,4 @@ class Card extends Component {
   }
 }
 
-export default Card;
+export default withRouter(Card);

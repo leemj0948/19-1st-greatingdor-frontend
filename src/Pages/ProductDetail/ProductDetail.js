@@ -13,12 +13,17 @@ export class ProductDetail extends Component {
 
   componentDidMount = () => {
     const id = this.props.match.params.id;
-    fetch(`http://10.58.7.140:8000/products/${id}`)
+    fetch(`http://3.36.96.154:8000/products/${id}`)
       .then(res => res.json())
       .then(data => {
-        this.setState({
-          productItem: data.RESULT,
-        });
+        this.setState(
+          {
+            productItem: data.RESULT,
+          },
+          () => {
+            console.log(this.state.productItem);
+          }
+        );
       });
   };
 
@@ -35,7 +40,6 @@ export class ProductDetail extends Component {
           <ProductInfo item={this.state.productItem} />
         </div>
         <ProductDescription item={this.state.productItem} />
-        <Footer />
       </div>
     );
   }

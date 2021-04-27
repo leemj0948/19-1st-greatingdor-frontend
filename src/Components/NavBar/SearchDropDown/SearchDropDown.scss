@@ -48,6 +48,7 @@
 
   .search_items {
     li {
+      flex-direction: column;
       .title {
         text-align: start;
         padding: 10px 0;

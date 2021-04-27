@@ -8,23 +8,24 @@
   position: absolute;
   width: 100px;
   height: 100px;
-  top: 250px;
+  top: 55%;
   font-size: 50px;
 }
 
 .mainBanner {
+  margin: 0 auto;
   width: 1800px;
   height: 500px;
 
   .leftArrow {
     @extend %buttonStyle;
     @extend %bannerButtonStyle;
-    left: 70px;
+    left: 10%;
   }
   .rightArrow {
     @extend %buttonStyle;
     @extend %bannerButtonStyle;
-    right: 66px;
+    right: 10%;
   }
 
   img {

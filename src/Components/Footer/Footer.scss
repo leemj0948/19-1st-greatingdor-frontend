@@ -1,81 +1,73 @@
 @import '../../Styles/common.scss';
-
-#footer {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
+.footer_container {
   background-color: $PrimaryGrey;
-
-  .footer_header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-
-    .footer_header_list {
-      span.personal_info {
-        font-weight: bold;
-      }
-      a {
-        margin-right: 8px;
-        text-decoration: none;
-        color: black;
-      }
-    }
-
-    .family_site {
-      padding: 5px;
-      cursor: pointer;
-
-      &:focus {
-        outline: none;
-      }
-    }
-  }
-
-  .footer_contents {
-    display: flex;
-    justify-content: space-between;
-
-    .customer_center {
-      .customer_center_title {
-        font-weight: bold;
-      }
-
-      div.phone {
-        color: $PrimaryGreen;
-        font-weight: bold;
-        font-size: 20px;
-      }
-
-      div {
-        margin-bottom: 10px;
-        font-size: 13px;
-      }
-
-      .social_media {
-        display: flex;
-        justify-content: flex-start;
-        padding-top: 5px;
-        font-size: 45px;
-
+  #footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    .footer_header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      .footer_header_list {
+        span.personal_info {
+          font-weight: bold;
+        }
         a {
+          margin-right: 8px;
           text-decoration: none;
           color: black;
         }
-        svg {
-          margin-right: 15px;
+      }
+      .family_site {
+        padding: 5px;
+        cursor: pointer;
+        &:focus {
+          outline: none;
         }
       }
     }
-
-    .company_info {
-      .company_name {
-        font-weight: bold;
+    .footer_contents {
+      display: flex;
+      justify-content: space-between;
+      .customer_center {
+        text-align: left;
+        .customer_center_title {
+          font-weight: bold;
+        }
+        div.phone {
+          color: $PrimaryGreen;
+          font-weight: bold;
+          font-size: 20px;
+        }
+        div {
+          margin-bottom: 10px;
+          font-size: 13px;
+        }
+        .social_media {
+          display: flex;
+          justify-content: flex-start;
+          padding-top: 5px;
+          font-size: 45px;
+          a {
+            text-decoration: none;
+            color: black;
+          }
+          svg {
+            margin-right: 15px;
+          }
+        }
       }
-      div {
-        margin-bottom: 10px;
-        font-size: 13px;
+      .company_info {
+        text-align: left;
+        .company_name {
+          font-weight: bold;
+        }
+        div {
+          margin-bottom: 10px;
+          font-size: 13px;
+        }
       }
     }
   }
